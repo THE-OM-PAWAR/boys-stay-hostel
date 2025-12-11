@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+    <section id="about" className="pt-24 sm:pt-32 md:pt-40 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 bg-white relative z-10">
       <div className="max-w-3xl mx-auto">
         <motion.div
           className="text-center"

@@ -1,3 +1,5 @@
+'use client';
+
 import { Card } from '@/components/ui/card';
 import {
   Wifi,
@@ -13,6 +15,16 @@ import {
   UtensilsCrossed,
   Fan,
 } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from '@/components/ui/carousel';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export function AmenitiesSection() {
   const amenities = [
@@ -34,8 +46,23 @@ export function AmenitiesSection() {
     { icon: Fan, name: 'Climate Control', description: 'AC & heating' },
   ];
 
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
-    <section id="amenities" className="py-32 px-6">
+    <section id="amenities" className="py-32 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-5xl font-bold mb-6">Amenities</h2>
@@ -45,22 +72,78 @@ export function AmenitiesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {amenities.map((amenity, index) => {
-            const Icon = amenity.icon;
-            return (
-              <Card
-                key={index}
-                className="p-8 rounded-3xl border-gray-100 shadow-sm hover:shadow-md transition-all hover:scale-105 text-center"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-[#fca311]/10 flex items-center justify-center mb-4 mx-auto">
-                  <Icon className="w-6 h-6 text-[#fca311]" />
-                </div>
-                <h3 className="font-semibold mb-1">{amenity.name}</h3>
-                <p className="text-sm text-gray-600">{amenity.description}</p>
-              </Card>
-            );
-          })}
+        <div className="relative py-12">
+          <Carousel
+            setApi={setApi}
+            opts={{
+              align: 'center',
+              loop: true,
+              dragFree: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {amenities.map((amenity, index) => {
+                const Icon = amenity.icon;
+                const isCenter = current === index;
+                
+                return (
+                  <CarouselItem
+                    key={index}
+                    className="pl-2 md:pl-4 basis-[70%] sm:basis-[50%] md:basis-[40%] lg:basis-[30%]"
+                  >
+                    <motion.div
+                      animate={{
+                        scale: isCenter ? 1.15 : 0.9,
+                        opacity: isCenter ? 1 : 0.7,
+                      }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 300,
+                        damping: 30,
+                        duration: 0.5,
+                      }}
+                      className="h-full"
+                    >
+                      <Card className="p-8 rounded-3xl border-gray-100 shadow-md hover:shadow-lg transition-all text-center h-full flex flex-col items-center justify-center">
+                        <motion.div
+                          animate={{
+                            scale: isCenter ? 1.1 : 1,
+                          }}
+                          transition={{
+                            type: 'spring',
+                            stiffness: 300,
+                            damping: 30,
+                          }}
+                          className="w-16 h-16 rounded-full bg-[#fca311]/10 flex items-center justify-center mb-4"
+                        >
+                          <Icon className="w-8 h-8 text-[#fca311]" />
+                        </motion.div>
+                        <motion.h3
+                          animate={{
+                            fontSize: isCenter ? '1.125rem' : '1rem',
+                          }}
+                          className="font-semibold mb-1"
+                        >
+                          {amenity.name}
+                        </motion.h3>
+                        <motion.p
+                          animate={{
+                            opacity: isCenter ? 1 : 0.8,
+                          }}
+                          className="text-sm text-gray-600"
+                        >
+                          {amenity.description}
+                        </motion.p>
+                      </Card>
+                    </motion.div>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 md:-left-12" />
+            <CarouselNext className="right-0 md:-right-12" />
+          </Carousel>
         </div>
       </div>
     </section>

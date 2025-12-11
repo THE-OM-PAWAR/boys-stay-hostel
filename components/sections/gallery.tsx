@@ -1,14 +1,25 @@
+'use client';
+
 import { Card } from '@/components/ui/card';
 import { Image as ImageIcon } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export function GallerySection() {
   const galleryItems = [
-    { title: 'Cozy Common Area', span: 'md:col-span-2 md:row-span-2' },
-    { title: 'Modern Rooms', span: '' },
-    { title: 'Rooftop Terrace', span: '' },
-    { title: 'Shared Kitchen', span: '' },
-    { title: 'Social Events', span: '' },
-    { title: 'City Views', span: 'md:col-span-2' },
+    { title: 'Cozy Common Area' },
+    { title: 'Modern Rooms' },
+    { title: 'Rooftop Terrace' },
+    { title: 'Shared Kitchen' },
+    { title: 'Social Events' },
+    { title: 'City Views' },
+    { title: 'Dormitory Spaces' },
+    { title: 'Recreation Room' },
   ];
 
   return (
@@ -22,21 +33,36 @@ export function GallerySection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6">
-          {galleryItems.map((item, index) => (
-            <Card
-              key={index}
-              className={`${item.span} rounded-3xl border-gray-200 overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer`}
-            >
-              <div className="relative aspect-square md:aspect-auto md:h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <ImageIcon className="w-12 h-12 text-gray-400 group-hover:scale-110 transition-transform" />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
-                  <p className="text-white font-semibold">{item.title}</p>
-                </div>
-              </div>
-            </Card>
-          ))}
+        <div className="relative">
+          <Carousel
+            opts={{
+              align: 'start',
+              loop: false,
+              dragFree: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4 md:-ml-6">
+              {galleryItems.map((item, index) => (
+                <CarouselItem
+                  key={index}
+                  className="pl-4 md:pl-6 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+                >
+                  <Card className="rounded-3xl border-gray-200 overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer h-full">
+                    <div className="relative aspect-[3/4] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                      <ImageIcon className="w-12 h-12 text-gray-400 group-hover:scale-110 transition-transform" />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+                        <p className="text-white font-semibold">{item.title}</p>
+                      </div>
+                    </div>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 md:-left-12" />
+            <CarouselNext className="right-0 md:-right-12" />
+          </Carousel>
         </div>
 
         <div className="mt-16 text-center">
