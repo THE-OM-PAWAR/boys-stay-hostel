@@ -1,7 +1,9 @@
 'use client';
 
-import { Card } from '@/components/ui/card';
-import { Image as ImageIcon } from 'lucide-react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { ArrowRight, ZoomIn, Camera } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -10,28 +12,99 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 
-export function GallerySection() {
-  const galleryItems = [
-    { title: 'Cozy Common Area' },
-    { title: 'Modern Rooms' },
-    { title: 'Rooftop Terrace' },
-    { title: 'Shared Kitchen' },
-    { title: 'Social Events' },
-    { title: 'City Views' },
-    { title: 'Dormitory Spaces' },
-    { title: 'Recreation Room' },
-  ];
+interface GalleryItem {
+  id: string;
+  title: string;
+  imageUrl: string;
+}
 
+const galleryItems: GalleryItem[] = [
+  {
+    id: '1',
+    title: 'Cozy Common Area',
+    imageUrl: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&h=800&fit=crop',
+  },
+  {
+    id: '2',
+    title: 'Modern Rooms',
+    imageUrl: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=800&fit=crop',
+  },
+  {
+    id: '3',
+    title: 'Rooftop Terrace',
+    imageUrl: 'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=600&h=800&fit=crop',
+  },
+  {
+    id: '4',
+    title: 'Shared Kitchen',
+    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=800&fit=crop',
+  },
+  {
+    id: '5',
+    title: 'Social Events',
+    imageUrl: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&h=800&fit=crop',
+  },
+  {
+    id: '6',
+    title: 'City Views',
+    imageUrl: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=800&fit=crop',
+  },
+  {
+    id: '7',
+    title: 'Dormitory Spaces',
+    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=800&fit=crop',
+  },
+  {
+    id: '8',
+    title: 'Recreation Room',
+    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=800&fit=crop',
+  },
+];
+
+export function GallerySection() {
   return (
-    <section id="gallery" className="py-32 px-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold mb-6">Gallery</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Take a peek at our spaces. See where you'll stay, relax, and connect
-            with fellow travelers.
-          </p>
-        </div>
+    <section id="gallery" className="py-10 sm:py-32 px-4 sm:px-6 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          className="text-center mb-12 sm:mb-16 relative"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+
+          {/* Main Heading */}
+          <motion.h2
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 relative inline-block"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <span className="bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">
+              Gallery
+            </span>
+            {/* Underline accent */}
+            <motion.div
+              className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow to-transparent"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
+            />
+          </motion.h2>
+
+          {/* Description */}
+          <motion.p
+            className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            Take a peek at our spaces. See where you'll stay, relax, and connect with fellow travelers.
+          </motion.p>
+        </motion.div>
 
         <div className="relative">
           <Carousel
@@ -42,37 +115,81 @@ export function GallerySection() {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-4 md:-ml-6">
+            <CarouselContent className="-ml-3 sm:-ml-4">
               {galleryItems.map((item, index) => (
                 <CarouselItem
-                  key={index}
-                  className="pl-4 md:pl-6 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+                  key={item.id}
+                  className="pl-3 sm:pl-4 basis-[280px] sm:basis-[320px]"
                 >
-                  <Card className="rounded-3xl border-gray-200 overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer h-full">
-                    <div className="relative aspect-[3/4] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                      <ImageIcon className="w-12 h-12 text-gray-400 group-hover:scale-110 transition-transform" />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
-                        <p className="text-white font-semibold">{item.title}</p>
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="group relative overflow-hidden rounded-lg cursor-pointer"
+                  >
+                    <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-100">
+                      <Image
+                        src={item.imageUrl}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        sizes="(max-width: 640px) 280px, 320px"
+                        unoptimized
+                      />
+
+                      {/* Overlay */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
+                        initial={{ opacity: 0.6 }}
+                        whileHover={{ opacity: 0.8 }}
+                        transition={{ duration: 0.3 }}
+                      />
+
+                      {/* Content */}
+                      <div className="absolute inset-0 flex items-end p-4 sm:p-6">
+                        <div className="w-full">
+                          <h3 className="text-white font-semibold text-base sm:text-lg mb-1">
+                            {item.title}
+                          </h3>
+                          <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <ZoomIn className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
                       </div>
+
+                      {/* Yellow accent on hover */}
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-yellow opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
-                  </Card>
+                  </motion.div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-0 md:-left-12" />
-            <CarouselNext className="right-0 md:-right-12" />
+            <div className="flex justify-end gap-3 mt-6 sm:mt-8">
+              <CarouselPrevious className="relative static translate-y-0 translate-x-0 h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gray-100 hover:bg-gray-200 border-gray-200 text-black shadow-sm transition-all" />
+              <CarouselNext className="relative static translate-y-0 translate-x-0 h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gray-100 hover:bg-gray-200 border-gray-200 text-black shadow-sm transition-all" />
+            </div>
           </Carousel>
         </div>
 
-        <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-6">
+        <motion.div
+          className="mt-12 sm:mt-16 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
             Want to see more? Check out our full photo gallery.
           </p>
-          <button className="text-black font-semibold hover:text-[#fca311] transition-colors">
-            View All Photos →
-          </button>
-        </div>
+          <Link
+            href="/gallery"
+            className="inline-flex items-center gap-2 text-black font-semibold hover:text-yellow transition-colors group"
+          >
+            View All Photos
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

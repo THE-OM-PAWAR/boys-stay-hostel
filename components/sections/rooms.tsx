@@ -1,83 +1,275 @@
+'use client';
+
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Bed, Users, Wifi, Coffee } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import { Bed, Users, Wifi, Coffee, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import Link from 'next/link';
+
+interface Room {
+  id: string;
+  name: string;
+  type: string;
+  description: string;
+  price: string;
+  capacity: string;
+  features: string[];
+}
+
+const allRooms: Room[] = [
+  {
+    id: '1',
+    name: 'Shared Dorm',
+    type: 'Shared',
+    description: 'Perfect for solo travelers looking to meet new people',
+    price: '$25',
+    capacity: '6-8 beds',
+    features: ['Free WiFi', 'Shared Bathroom', 'Lockers', 'Common Area'],
+  },
+  {
+    id: '2',
+    name: 'Private Room',
+    type: 'Private',
+    description: 'Your own space with all the hostel perks',
+    price: '$60',
+    capacity: '2 beds',
+    features: ['Free WiFi', 'Private Bathroom', 'Workspace', 'Mini Fridge'],
+  },
+  {
+    id: '3',
+    name: 'Deluxe Suite',
+    type: 'Suite',
+    description: 'Premium comfort with stunning city views',
+    price: '$95',
+    capacity: '2-4 beds',
+    features: ['Free WiFi', 'Ensuite Bath', 'City View', 'Kitchenette'],
+  },
+];
+
+const roomTypes = ['All', 'Shared', 'Private', 'Suite'];
 
 export function RoomsSection() {
-  const rooms = [
-    {
-      name: 'Shared Dorm',
-      description: 'Perfect for solo travelers looking to meet new people',
-      price: '$25',
-      capacity: '6-8 beds',
-      features: ['Free WiFi', 'Shared Bathroom', 'Lockers', 'Common Area'],
+  const [selectedType, setSelectedType] = useState('All');
+
+  const filteredRooms =
+    selectedType === 'All'
+      ? allRooms
+      : allRooms.filter((room) => room.type === selectedType);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
     },
-    {
-      name: 'Private Room',
-      description: 'Your own space with all the hostel perks',
-      price: '$60',
-      capacity: '2 beds',
-      features: ['Free WiFi', 'Private Bathroom', 'Workspace', 'Mini Fridge'],
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
     },
-    {
-      name: 'Deluxe Suite',
-      description: 'Premium comfort with stunning city views',
-      price: '$95',
-      capacity: '2-4 beds',
-      features: ['Free WiFi', 'Ensuite Bath', 'City View', 'Kitchenette'],
-    },
-  ];
+  };
 
   return (
-    <section id="rooms" className="py-32 px-6 bg-gray-50">
+    <section id="rooms" className="py-20 sm:py-32 px-4 sm:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold mb-6">Our Rooms</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Choose the perfect space for your stay. All rooms include premium
-            amenities and access to our shared facilities.
-          </p>
-        </div>
+        <motion.div
+          className="text-center mb-12 sm:mb-16 relative"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {rooms.map((room, index) => (
-            <Card
-              key={index}
-              className="p-8 rounded-3xl border-gray-200 bg-white hover:shadow-lg transition-shadow"
+
+          {/* Main Heading */}
+          <motion.h2
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 relative inline-block"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <span className="bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">
+              Our Rooms
+            </span>
+            {/* Underline accent */}
+            <motion.div
+              className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow to-transparent"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
+            />
+          </motion.h2>
+
+          {/* Description */}
+          <motion.p
+            className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            Choose the perfect space for your stay. From cozy shared dorms to premium private suites.
+          </motion.p>
+
+
+        </motion.div>
+
+        {/* Room Type Selection */}
+        <motion.div
+          className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10 sm:mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {roomTypes.map((type) => (
+            <button
+              key={type}
+              onClick={() => setSelectedType(type)}
+              className={`px-3 sm:px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
+                selectedType === type
+                  ? 'bg-black text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
             >
-              <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl mb-6 flex items-center justify-center">
-                <Bed className="w-12 h-12 text-gray-400" />
-              </div>
-
-              <h3 className="text-2xl font-semibold mb-2">{room.name}</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                {room.description}
-              </p>
-
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl font-bold">{room.price}</span>
-                <span className="text-gray-500">/ night</span>
-              </div>
-
-              <div className="flex items-center gap-2 text-sm text-gray-600 mb-6">
-                <Users className="w-4 h-4" />
-                <span>{room.capacity}</span>
-              </div>
-
-              <ul className="space-y-3 mb-8">
-                {room.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#fca311]" />
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Button className="w-full bg-black hover:bg-black/90 rounded-xl">
-                Book Now
-              </Button>
-            </Card>
+              {type}
+            </button>
           ))}
+        </motion.div>
+
+        {/* Rooms Carousel */}
+        <div className="relative">
+          <Carousel
+            opts={{
+              align: 'start',
+              loop: false,
+              dragFree: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-3 sm:-ml-4">
+              {filteredRooms.map((room, index) => (
+                <CarouselItem
+                  key={room.id}
+                  className="pl-3 sm:pl-4 basis-[280px] sm:basis-[300px]"
+                >
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.08 }}
+                    className="h-full"
+                  >
+                    <div className="group relative overflow-hidden rounded-lg bg-white border border-gray-100 hover:border-yellow/30 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                      {/* Yellow accent bar */}
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow to-yellow/80" />
+                      
+                      {/* Image */}
+                      <div className="relative h-40 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <Bed className="w-8 h-8 text-gray-300 group-hover:text-yellow/60 transition-colors duration-300" />
+                        </div>
+                        <div className="absolute top-3 right-3">
+                          <span className="px-2.5 py-1 text-xs font-medium bg-yellow text-black rounded-full shadow-sm">
+                            {room.type}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-4 flex-1 flex flex-col">
+                        <div className="mb-3">
+                          <h3 className="text-lg font-semibold mb-1 text-black">
+                            {room.name}
+                          </h3>
+                          <p className="text-xs text-gray-500 line-clamp-2 leading-relaxed">
+                            {room.description}
+                          </p>
+                        </div>
+
+                        <div className="flex items-baseline gap-1 mb-3">
+                          <span className="text-2xl font-bold text-black">
+                            {room.price}
+                          </span>
+                          <span className="text-xs text-gray-400">/night</span>
+                        </div>
+
+                        <div className="flex items-center gap-1.5 text-xs text-gray-500 mb-3">
+                          <Users className="w-3.5 h-3.5 text-yellow" />
+                          <span>{room.capacity}</span>
+                        </div>
+
+                        <div className="flex flex-wrap gap-1.5 mb-4">
+                          {room.features.slice(0, 2).map((feature, i) => (
+                            <span
+                              key={i}
+                              className="px-2 py-0.5 text-xs bg-yellow/10 text-gray-700 rounded-md border border-yellow/20"
+                            >
+                              {feature}
+                            </span>
+                          ))}
+                        </div>
+
+                        <Link
+                          href="/rooms"
+                          className="mt-auto w-full py-2.5 px-4 bg-yellow hover:bg-yellow/90 text-black text-sm font-medium rounded-lg transition-colors duration-200 flex items-center justify-center gap-1.5 group/btn shadow-sm shadow-yellow/20"
+                        >
+                          View
+                          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" />
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-end gap-3 mt-6 sm:mt-8">
+              <CarouselPrevious className="relative static translate-y-0 translate-x-0 h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gray-100 hover:bg-gray-200 border-gray-200 text-black shadow-sm transition-all" />
+              <CarouselNext className="relative static translate-y-0 translate-x-0 h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gray-100 hover:bg-gray-200 border-gray-200 text-black shadow-sm transition-all" />
+            </div>
+          </Carousel>
         </div>
+
+        {/* Explore All Rooms Button */}
+        <motion.div
+          className="flex justify-center mt-8 sm:mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <Button
+            size="lg"
+            className="group bg-black hover:bg-black/90 text-white font-medium px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 text-sm sm:text-base rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+            asChild
+          >
+            <Link href="/rooms">
+              <span className="flex items-center gap-2">
+                Explore All Rooms
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
+              </span>
+            </Link>
+          </Button>
+        </motion.div>
       </div>
     </section>
   );
