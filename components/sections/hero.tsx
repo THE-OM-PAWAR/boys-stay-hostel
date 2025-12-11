@@ -130,7 +130,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="h-screen flex flex-col px-4 sm:px-6 md:px-8 lg:px-12 pt-16 bg-white overflow-hidden">
+    <section className="min-h-screen flex flex-col px-4 sm:px-6 md:px-8 lg:px-12 pt-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto w-full h-full flex flex-col">
         {/* Hero Content */}
         <motion.div
@@ -204,16 +204,16 @@ export function HeroSection() {
         </motion.div>
 
         {/* Room Carousel */}
-        <div className="flex-1 relative min-h-0 pb-6 sm:pb-8 md:pb-10 lg:pb-12 pt-6 sm:pt-8 md:pt-10 lg:pt-12">
+        <div className="flex-1 relative min-h-0 pb-6 sm:pb-8 md:pb-10 lg:pb-12 pt-2 sm:pt-2 md:pt-2 lg:pt-2">
           <Carousel
             opts={{
               align: 'start',
               loop: false,
               dragFree: true,
             }}
-            className="w-full h-full"
+            className="w-full h-full overflow-hidden min-h-[400px]"
           >
-            <CarouselContent className="-ml-2 sm:-ml-3 md:-ml-3 lg:-ml-3 h-full">
+            <CarouselContent className="-ml-2 sm:-ml-3 md:-ml-3 lg:-ml-3 h-full max-h-[400px]">
               {rooms.map((room, index) => (
                 <CarouselItem
                   key={room.id}
@@ -247,9 +247,9 @@ export function HeroSection() {
                       
                       {/* Gradient Overlay */}
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-                        initial={{ opacity: 0.6 }}
-                        whileHover={{ opacity: 0.8 }}
+                        className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-black/60 via-black/30 to-transparent"
+                        initial={{ opacity: 0.5 }}
+                        whileHover={{ opacity: 0.7 }}
                         transition={{ duration: 0.3 }}
                       />
 
