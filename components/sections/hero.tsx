@@ -211,7 +211,7 @@ export function HeroSection() {
               loop: false,
               dragFree: true,
             }}
-            className="w-full h-full overflow-hidden min-h-[400px]"
+            className="w-full h-full min-h-[400px]"
           >
             <CarouselContent className="-ml-2 sm:-ml-3 md:-ml-3 lg:-ml-3 h-full max-h-[400px]">
               {rooms.map((room, index) => (
