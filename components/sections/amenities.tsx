@@ -31,13 +31,11 @@ import { useEffect, useState } from 'react';
 export function AmenitiesSection() {
   const amenities = [
     { icon: Wifi, name: 'Free WiFi', description: 'High-speed internet' },
-    { icon: Coffee, name: 'Free Coffee', description: 'All day, every day' },
+    { icon: UtensilsCrossed, name: 'Meals Provided', description: 'Delicious & nutritious' },
     { icon: Utensils, name: 'Kitchen', description: 'Fully equipped' },
     { icon: Dumbbell, name: 'Gym Access', description: 'Stay active' },
     { icon: Laptop, name: 'Workspace', description: 'Co-working area' },
     { icon: Music, name: 'Common Room', description: 'Socialize & relax' },
-    { icon: Bike, name: 'Bike Rental', description: 'Explore the city' },
-    { icon: MapPin, name: 'Tours', description: 'Guided excursions' },
     { icon: Tv, name: 'Entertainment', description: 'Movies & games' },
     {
       icon: WashingMachine,
@@ -45,7 +43,7 @@ export function AmenitiesSection() {
       description: 'Washing facilities',
     },
     { icon: UtensilsCrossed, name: 'Dining Area', description: 'Shared meals' },
-    { icon: Fan, name: 'Climate Control', description: 'AC & heating' },
+    { icon: Fan, name: 'AC Rooms', description: 'Air-conditioned rooms' },
   ];
 
   const [api, setApi] = useState<CarouselApi>();
