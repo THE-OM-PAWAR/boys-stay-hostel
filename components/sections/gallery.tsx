@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, ZoomIn, Camera } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -43,6 +43,31 @@ const galleryItems: GalleryItem[] = [
     id: '5',
     title: 'Social Events',
     imageUrl: '/images/galleryroom2.jpeg',
+  },
+  {
+    id: '6',
+    title: 'Interior View',
+    imageUrl: '/images/interior1.jpeg',
+  },
+  {
+    id: '7',
+    title: 'Interior View',
+    imageUrl: '/images/interior2.jpeg',
+  },
+  {
+    id: '8',
+    title: 'Exterior View',
+    imageUrl: '/images/exterior1.jpeg',
+  },
+  {
+    id: '9',
+    title: 'Mess Area',
+    imageUrl: '/images/mess1.jpeg',
+  },
+  {
+    id: '10',
+    title: 'Other',
+    imageUrl: '/images/other1.jpeg',
   },
   
  
@@ -125,26 +150,6 @@ export function GallerySection() {
                         sizes="(max-width: 640px) 280px, 320px"
                         unoptimized
                       />
-
-                      {/* Overlay */}
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
-                        initial={{ opacity: 0.6 }}
-                        whileHover={{ opacity: 0.8 }}
-                        transition={{ duration: 0.3 }}
-                      />
-
-                      {/* Content */}
-                      <div className="absolute inset-0 flex items-end p-4 sm:p-6">
-                        <div className="w-full">
-                          <h3 className="text-white font-semibold text-base sm:text-lg mb-1">
-                            {item.title}
-                          </h3>
-                          <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <ZoomIn className="w-4 h-4 text-white" />
-                          </div>
-                        </div>
-                      </div>
 
                       {/* Yellow accent on hover */}
                       <div className="absolute top-0 left-0 right-0 h-1 bg-yellow opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

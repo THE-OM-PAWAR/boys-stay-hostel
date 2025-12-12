@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Coffee, ShoppingBag, Camera, Utensils, Music } from 'lucide-react';
+import { MapPin, Train, Bus, ShoppingBag, Heart, Camera, Building } from 'lucide-react';
 
 interface Place {
   id: string;
@@ -14,45 +14,45 @@ interface Place {
 const nearbyPlaces: Place[] = [
   {
     id: '1',
-    name: 'Downtown Market',
-    category: 'Shopping',
-    distance: '0.5 km',
-    icon: ShoppingBag,
+    name: 'rani kamlapati station',
+    category: 'railway station',
+    distance: '2.0 km',
+    icon: Train,
   },
   {
     id: '2',
-    name: 'City Park',
-    category: 'Recreation',
-    distance: '0.8 km',
-    icon: MapPin,
+    name: 'ISBT Bus Stand',
+    category: 'bus stand',
+    distance: '1.5 km',
+    icon: Bus,
   },
   {
     id: '3',
-    name: 'Art Gallery',
-    category: 'Culture',
+    name: 'DB City Mall',
+    category: 'shopping mall',
     distance: '1.2 km',
-    icon: Camera,
+    icon: ShoppingBag,
   },
   {
     id: '4',
-    name: 'Local Café',
-    category: 'Dining',
-    distance: '0.3 km',
-    icon: Coffee,
+    name: 'AIIMS Bhopal',
+    category: 'hospital',
+    distance: '5.0 km',
+    icon: Heart,
   },
   {
     id: '5',
-    name: 'Restaurant Row',
-    category: 'Dining',
-    distance: '0.6 km',
-    icon: Utensils,
+    name: 'Lake View Point',
+    category: 'view point',
+    distance: '6.0 km',
+    icon: Camera,
   },
   {
     id: '6',
-    name: 'Music Venue',
-    category: 'Entertainment',
-    distance: '1.0 km',
-    icon: Music,
+    name: 'Shaurya Smarak',
+    category: 'memorial',
+    distance: '1.5 km',
+    icon: Building,
   },
 ];
 

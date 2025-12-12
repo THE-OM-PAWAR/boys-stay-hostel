@@ -78,14 +78,75 @@ const galleryImages: GalleryImage[] = [
     imageUrl: '/images/galleryroom8.jpeg',
     aspectRatio: 'portrait',
   },
+  {
+    id: '2.9',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/interior1.jpeg',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: '2.10',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/interior2.jpeg',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: '2.11',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/interior3.jpeg',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: '2.12',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/interior4.jpeg',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: '2.13',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/interior5.jpeg',
+    aspectRatio: 'portrait',
+  },
+
+
+  //exterior images
   
   {
     id: '3',
     title: 'Rooftop Terrace',
     category: 'exterior',
-    imageUrl: '/images/office.jpeg',
+    imageUrl: '/images/boysstay.jpeg',
     aspectRatio: 'landscape',
   },
+  {
+    id: '3.1',
+    title: 'Rooftop Terrace',
+    category: 'exterior',
+    imageUrl: '/images/exterior1.jpeg',
+    aspectRatio: 'landscape',
+  },
+  {
+    id: '3.2',
+    title: 'Rooftop Terrace',
+    category: 'exterior',
+    imageUrl: '/images/exterior2.jpeg',
+    aspectRatio: 'landscape',
+  },
+  {
+    id: '3.3',
+    title: 'Rooftop Terrace',
+    category: 'exterior',
+    imageUrl: '/images/exterior3.jpeg',
+    aspectRatio: 'landscape',
+  },
+
+  //mess images
   {
     id: '4',
     title: 'Shared Kitchen',
@@ -94,26 +155,119 @@ const galleryImages: GalleryImage[] = [
     aspectRatio: 'square',
   },
   {
-    id: '5',
-    title: 'Social Events Space',
-    category: 'interior',
-    imageUrl: '/images/galleryroom2.jpeg',
-    aspectRatio: 'portrait',
+    id: '4.1',
+    title: 'Shared Kitchen',
+    category: 'mess',
+    imageUrl: '/images/mess1.jpeg',
+    aspectRatio: 'square',
   },
   {
-    id: '6',
-    title: 'City Views',
-    category: 'exterior',
-    imageUrl: '/images/lift.jpeg',
-    aspectRatio: 'landscape',
+    id: '4.2',
+    title: 'Shared Kitchen',
+    category: 'mess',
+    imageUrl: '/images/gallerymess2.jpeg',
+    aspectRatio: 'square',
   },
 
+  //others
+    {
+      id: '5',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other1.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.1',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other2.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.2',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other3.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.3',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other4.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.4',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other5.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.5',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other6.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.6',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other7.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.7',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other8.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.8',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other9.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.9',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other10.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.10',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other11.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.11',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other12.jpeg',
+      aspectRatio: 'portrait',
+    },
+    {
+      id: '5.12',
+      title: 'Social Events Space',
+      category: 'others',
+      imageUrl: '/images/other13.jpeg',
+      aspectRatio: 'portrait',
+    },
+  
   
  
  
 ];
 
-const categories = ['All', 'interior', 'exterior', 'mess'];
+const categories = ['All', 'interior', 'exterior', 'mess', 'others'];
 
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
