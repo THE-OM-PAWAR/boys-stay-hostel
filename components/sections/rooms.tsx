@@ -42,7 +42,7 @@ const allRooms: Room[] = [
     description: 'Spacious room for three residents, equipped with comfortable beds, personal storage, and all essential amenities for a relaxed stay.',
     capacity: '3 beds',
     features: ['Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
-    image: '/images/room3.jpeg',
+    image: '/images/galleryroom9.jpeg',
   },
   {
     id: '3',
