@@ -1,109 +1,258 @@
+'use client';
+
 import Link from 'next/link';
-import { Home, Mail, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Home, Mail, Instagram, Facebook, Twitter, Phone, MapPin } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export function Footer() {
+  const quickLinks = [
+    { href: '/#about', label: 'About Us' },
+    { href: '/#rooms', label: 'Our Rooms' },
+    { href: '/#gallery', label: 'Gallery' },
+    { href: '/#amenities', label: 'Amenities' },
+    { href: '/#places-nearby', label: 'Places Nearby' },
+  ];
+
+  const socialLinks = [
+    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Twitter, href: '#', label: 'Twitter' },
+  ];
+
+  const footerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
-    <footer className="bg-gray-50 border-t border-gray-100">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
-          <div>
-            <Link href="/" className="flex items-center gap-2 text-xl font-semibold mb-4">
-              <Home className="w-6 h-6" />
-              Haven Hostel
+    <motion.footer
+      className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 relative overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={footerVariants}
+    >
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-yellow/5 blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+        <motion.div
+          className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-yellow/5 blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 3,
+          }}
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12">
+          {/* Brand Section */}
+          <motion.div variants={itemVariants} className="sm:col-span-2 lg:col-span-1">
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-xl sm:text-2xl font-bold mb-4 group"
+            >
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.2 }}
+                className="w-8 h-8 rounded-lg bg-yellow/10 flex items-center justify-center group-hover:bg-yellow/20 transition-colors"
+              >
+                <Home className="w-5 h-5 text-yellow" />
+              </motion.div>
+              <span className="bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
+                Haven Hostel
+              </span>
             </Link>
-            <p className="text-sm text-gray-600 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6 max-w-sm">
               Your home away from home. Experience comfort, community, and
               unforgettable memories.
             </p>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/#about" className="text-sm text-gray-600 hover:text-black transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/#rooms" className="text-sm text-gray-600 hover:text-black transition-colors">
-                  Our Rooms
-                </Link>
-              </li>
-              <li>
-                <Link href="/#amenities" className="text-sm text-gray-600 hover:text-black transition-colors">
-                  Amenities
-                </Link>
-              </li>
-              <li>
-                <Link href="/#gallery" className="text-sm text-gray-600 hover:text-black transition-colors">
-                  Gallery
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>123 Travel Street</li>
-              <li>Downtown District</li>
-              <li>City, State 12345</li>
-              <li className="pt-2">
-                <a href="mailto:hello@havenhostel.com" className="hover:text-black transition-colors">
-                  hello@havenhostel.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:+15551234567" className="hover:text-black transition-colors">
-                  +1 (555) 123-4567
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Follow Us</h3>
+            {/* Social Icons */}
             <div className="flex gap-3">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition-colors"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition-colors"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition-colors"
-              >
-                <Twitter className="w-4 h-4" />
-              </a>
+              {socialLinks.map((social, index) => {
+                const Icon = social.icon;
+                return (
+                  <motion.a
+                    key={social.label}
+                    href={social.href}
+                    aria-label={social.label}
+                    className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center hover:border-yellow/50 hover:bg-yellow/5 transition-all duration-300 group relative overflow-hidden"
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Icon className="w-4 h-4 text-gray-600 group-hover:text-yellow transition-colors relative z-10" />
+                    <motion.div
+                      className="absolute inset-0 bg-yellow/10"
+                      initial={{ scale: 0 }}
+                      whileHover={{ scale: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </motion.a>
+                );
+              })}
             </div>
-          </div>
+          </motion.div>
+
+          {/* Quick Links */}
+          <motion.div variants={itemVariants}>
+            <h3 className="font-bold text-lg mb-4 text-gray-900">Quick Links</h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link, index) => (
+                <motion.li
+                  key={link.href}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
+                >
+                  <Link
+                    href={link.href}
+                    className="group relative text-sm text-gray-600 hover:text-black transition-colors inline-flex items-center gap-2"
+                  >
+                    <motion.span
+                      className="w-1.5 h-1.5 rounded-full bg-yellow opacity-0 group-hover:opacity-100 transition-opacity"
+                      whileHover={{ scale: [1, 1.5, 1] }}
+                      transition={{ duration: 0.5 }}
+                    />
+                    <span className="relative">
+                      {link.label}
+                      <motion.span
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow origin-left"
+                        initial={{ scaleX: 0 }}
+                        whileHover={{ scaleX: 1 }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </span>
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Contact */}
+          <motion.div variants={itemVariants}>
+            <h3 className="font-bold text-lg mb-4 text-gray-900">Contact</h3>
+            <ul className="space-y-3 text-sm text-gray-600">
+              <motion.li
+                className="flex items-start gap-2"
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.6 }}
+              >
+                <MapPin className="w-4 h-4 text-yellow mt-0.5 flex-shrink-0" />
+                <div>
+                  <p>123 Travel Street</p>
+                  <p>Downtown District</p>
+                  <p>City, State 12345</p>
+                </div>
+              </motion.li>
+              <motion.li
+                className="pt-2"
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.7 }}
+              >
+                <a
+                  href="mailto:hello@havenhostel.com"
+                  className="flex items-center gap-2 hover:text-black transition-colors group"
+                >
+                  <Mail className="w-4 h-4 text-yellow group-hover:scale-110 transition-transform" />
+                  <span>hello@havenhostel.com</span>
+                </a>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.8 }}
+              >
+                <a
+                  href="tel:+15551234567"
+                  className="flex items-center gap-2 hover:text-black transition-colors group"
+                >
+                  <Phone className="w-4 h-4 text-yellow group-hover:scale-110 transition-transform" />
+                  <span>+1 (555) 123-4567</span>
+                </a>
+              </motion.li>
+            </ul>
+          </motion.div>
         </div>
 
-        <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
+        {/* Bottom Bar */}
+        <motion.div
+          className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.9 }}
+        >
           <p className="text-sm text-gray-600">
-            © 2024 Haven Hostel. All rights reserved.
+            © {new Date().getFullYear()} Haven Hostel. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-gray-600">
-            <a href="#" className="hover:text-black transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-black transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="hover:text-black transition-colors">
-              Cookie Policy
-            </a>
+          <div className="flex flex-wrap gap-4 sm:gap-6 text-sm text-gray-600 justify-center">
+            {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item, index) => (
+              <motion.a
+                key={item}
+                href="#"
+                className="hover:text-black transition-colors relative group"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 1 + index * 0.1 }}
+                whileHover={{ y: -2 }}
+              >
+                {item}
+                <motion.span
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow origin-left"
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.a>
+            ))}
           </div>
-        </div>
+        </motion.div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

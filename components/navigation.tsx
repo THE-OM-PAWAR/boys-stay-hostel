@@ -16,8 +16,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 const navLinks = [
   { href: '/#about', label: 'About' },
   { href: '/#rooms', label: 'Rooms' },
-  { href: '/#amenities', label: 'Amenities' },
   { href: '/#gallery', label: 'Gallery' },
+  { href: '/#amenities', label: 'Amenities' },
+  { href: '/#places-nearby', label: 'Places Nearby' },
 ];
 
 export function Navigation() {
@@ -103,6 +104,28 @@ export function Navigation() {
             initial="hidden"
             animate="visible"
           >
+            {/* Home Button */}
+            <motion.div
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Link
+                href="/"
+                className="relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-black transition-colors rounded-md hover:bg-gray-50 group flex items-center gap-1.5"
+              >
+                <Home className="w-4 h-4 group-hover:text-yellow transition-colors" />
+                <span>Home</span>
+                <motion.span
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow origin-left"
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </Link>
+            </motion.div>
+
             {navLinks.map((link, index) => (
               <motion.div
                 key={link.href}
@@ -183,62 +206,148 @@ export function Navigation() {
                   </AnimatePresence>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <SheetHeader>
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <SheetTitle className="text-left text-xl font-semibold">
-                      Menu
-                    </SheetTitle>
-                  </motion.div>
-                </SheetHeader>
-                <nav className="flex flex-col gap-2 mt-8">
-                  <AnimatePresence>
-                    {navLinks.map((link, index) => (
-                      <motion.div
-                        key={link.href}
-                        variants={mobileItemVariants}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ delay: index * 0.1 }}
-                        whileHover={{ x: 5 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <Link
-                          href={link.href}
-                          onClick={() => setIsOpen(false)}
-                          className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 rounded-md transition-colors"
-                        >
-                          {link.label}
-                        </Link>
-                      </motion.div>
-                    ))}
-                  </AnimatePresence>
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: navLinks.length * 0.1 + 0.1 }}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="mt-4"
-                  >
-                    <Link
-                      href="/contact"
-                      onClick={() => setIsOpen(false)}
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] p-0">
+                {/* Animated background gradient */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-yellow/5 via-transparent to-transparent pointer-events-none"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                />
+                
+                <div className="relative h-full flex flex-col">
+                  <SheetHeader className="px-6 pt-6 pb-4 border-b border-gray-100">
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: 0.1 }}
                     >
-                      <Button
-                        size="lg"
-                        className="w-full bg-black hover:bg-black/90 text-white font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                      <SheetTitle className="text-left text-2xl font-bold bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
+                        Menu
+                      </SheetTitle>
+                      <motion.p
+                        className="text-sm text-gray-500 mt-1"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
                       >
-                        <Mail className="w-4 h-4 mr-2" />
-                        Contact
-                      </Button>
-                    </Link>
-                  </motion.div>
-                </nav>
+                        Navigate to sections
+                      </motion.p>
+                    </motion.div>
+                  </SheetHeader>
+                  
+                  <nav className="flex-1 flex flex-col gap-1 px-4 py-6 overflow-y-auto">
+                    {/* Home Button */}
+                    <motion.div
+                      initial={{ opacity: 0, x: -30, scale: 0.9 }}
+                      animate={{ opacity: 1, x: 0, scale: 1 }}
+                      transition={{ duration: 0.4, delay: 0.15, type: 'spring', stiffness: 200 }}
+                      whileHover={{ x: 8, scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Link
+                        href="/"
+                        onClick={() => setIsOpen(false)}
+                        className="group relative block px-4 py-3.5 text-base font-semibold text-gray-900 hover:text-black hover:bg-yellow/10 rounded-lg transition-all duration-300 border border-transparent hover:border-yellow/20"
+                      >
+                        <div className="flex items-center gap-3">
+                          <motion.div
+                            className="w-10 h-10 rounded-lg bg-yellow/10 group-hover:bg-yellow/20 flex items-center justify-center transition-colors"
+                            whileHover={{ rotate: 360 }}
+                            transition={{ duration: 0.5 }}
+                          >
+                            <Home className="w-5 h-5 text-yellow" />
+                          </motion.div>
+                          <span>Home</span>
+                        </div>
+                        <motion.div
+                          className="absolute left-0 top-0 bottom-0 w-1 bg-yellow rounded-r-full"
+                          initial={{ scaleY: 0 }}
+                          whileHover={{ scaleY: 1 }}
+                          transition={{ duration: 0.3 }}
+                        />
+                      </Link>
+                    </motion.div>
+
+                    {/* Navigation Links */}
+                    <AnimatePresence>
+                      {navLinks.map((link, index) => (
+                        <motion.div
+                          key={link.href}
+                          initial={{ opacity: 0, x: -30, scale: 0.9 }}
+                          animate={{ opacity: 1, x: 0, scale: 1 }}
+                          exit={{ opacity: 0, x: -20 }}
+                          transition={{ 
+                            duration: 0.4, 
+                            delay: 0.2 + index * 0.08,
+                            type: 'spring',
+                            stiffness: 200,
+                            damping: 20
+                          }}
+                          whileHover={{ x: 8, scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <Link
+                            href={link.href}
+                            onClick={() => setIsOpen(false)}
+                            className="group relative block px-4 py-3.5 text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-all duration-300 border border-transparent hover:border-gray-200"
+                          >
+                            <div className="flex items-center gap-3">
+                              <motion.div
+                                className="w-2 h-2 rounded-full bg-yellow opacity-0 group-hover:opacity-100 transition-opacity"
+                                whileHover={{ scale: [1, 1.5, 1] }}
+                                transition={{ duration: 0.5, repeat: Infinity }}
+                              />
+                              <span>{link.label}</span>
+                            </div>
+                            <motion.div
+                              className="absolute left-0 top-0 bottom-0 w-1 bg-yellow rounded-r-full"
+                              initial={{ scaleY: 0 }}
+                              whileHover={{ scaleY: 1 }}
+                              transition={{ duration: 0.3 }}
+                            />
+                          </Link>
+                        </motion.div>
+                      ))}
+                    </AnimatePresence>
+
+                    {/* Divider */}
+                    <motion.div
+                      className="my-4 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+                    />
+
+                    {/* Contact Button */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{ 
+                        duration: 0.5, 
+                        delay: 0.7,
+                        type: 'spring',
+                        stiffness: 200
+                      }}
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="mt-2"
+                    >
+                      <Link
+                        href="/contact"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <Button
+                          size="lg"
+                          className="w-full bg-gradient-to-r from-black to-gray-800 hover:from-gray-800 hover:to-black text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-xl group"
+                        >
+                          <Mail className="w-4 h-4 mr-2 transition-transform group-hover:translate-x-1" />
+                          Contact Us
+                        </Button>
+                      </Link>
+                    </motion.div>
+                  </nav>
+                </div>
               </SheetContent>
             </Sheet>
           </motion.div>

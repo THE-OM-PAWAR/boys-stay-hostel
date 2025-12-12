@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Users } from 'lucide-react';
+import { ArrowRight, MapIcon, MapPin, MessageCircle, Users } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -128,7 +128,7 @@ export function HeroSection() {
       <div className="max-w-7xl mx-auto w-full h-full flex flex-col">
         {/* Hero Content */}
         <motion.div
-          className="flex-shrink-0 max-w-5xl mx-auto text-center pt-4 sm:pt-6 md:pt-8 lg:pt-10 pb-3 sm:pb-4 md:pb-6 relative"
+          className="flex-shrink-0 max-w-5xl mx-auto text-center pt-4 sm:pt-6 md:pt-8 lg:pt-10 pb-3 sm:pb-4 md:pb-6 relative mt-4"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -170,48 +170,60 @@ export function HeroSection() {
             </motion.p>
 
             <motion.div
-              className="flex flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0"
+              className="flex flex-row gap-2 sm:gap-3 justify-center items-center px-2 sm:px-0"
               variants={containerVariants}
             >
               <motion.div variants={buttonVariants}>
                 <Button
-                  size="lg"
-                  className="group bg-yellow hover:bg-yellow/90 text-white font-normal px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-sm sm:text-base rounded-full shadow-lg shadow-yellow/20 hover:shadow-xl hover:shadow-yellow/30 transition-all duration-300 focus:ring-0 hover:scale-105 active:scale-95"
+                  size="sm"
+                  className="group bg-yellow hover:bg-yellow/90 text-white font-normal px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 text-xs sm:text-sm rounded-full shadow-lg shadow-yellow/20 hover:shadow-xl hover:shadow-yellow/30 transition-all duration-300 focus:ring-0 hover:scale-105 active:scale-95"
                 >
-                  <span className="flex items-center gap-2">
+                  <span className="flex items-center gap-1.5">
                     Book Now
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Button>
               </motion.div>
               <motion.div variants={buttonVariants}>
                 <Button
-                  size="lg"
+                  size="sm"
                   variant="outline"
-                  className="border border-black text-black font-normal px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-sm sm:text-base rounded-full bg-transparent hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 focus:ring-0 hover:scale-105 active:scale-95 backdrop-blur-sm"
+                  className="border border-black text-black font-normal px-2.5 sm:px-3 md:px-8 py-2.5 sm:py-3 md:py-3.5 text-xs sm:text-sm rounded-full bg-transparent hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 focus:ring-0 hover:scale-105 active:scale-95 backdrop-blur-sm flex items-center gap-1.5"
                 >
-                  Take a Tour
+                  <MapPin className="w-5 h-5 text-black/70" />
+                  Location
                 </Button>
+              </motion.div>
+              <motion.div variants={buttonVariants}>
+                <a
+                  href="https://wa.me/919876543210"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-green-500 hover:bg-green-600 transition-colors duration-300 shadow-lg group"
+                  aria-label="Chat on WhatsApp"
+                >
+                  <MessageCircle className="w-5 h-5 text-white" />
+                </a>
               </motion.div>
             </motion.div>
           </div>
         </motion.div>
 
         {/* Room Carousel */}
-        <div className="flex-1 relative min-h-0 pb-6 sm:pb-8 md:pb-10 lg:pb-12 pt-2 sm:pt-2 md:pt-2 lg:pt-2">
+        <div className="flex-1 relative min-h-0 pb-6 sm:pb-8 md:pb-10 lg:pb-12 pt-2 sm:pt-2 md:pt-2 lg:pt-2 mt-8">
           <Carousel
             opts={{
               align: 'start',
               loop: false,
               dragFree: true,
             }}
-            className="w-full h-full min-h-[400px]"
+            className="w-full h-full min-h-[400px] overflow-visible"
           >
             <CarouselContent className="-ml-2 sm:-ml-3 md:-ml-3 lg:-ml-3 h-full max-h-[400px]">
               {rooms.map((room, index) => (
                 <CarouselItem
                   key={room.id}
-                  className="pl-2 sm:pl-3 md:pl-3 lg:pl-3 basis-[90%] sm:basis-[75%] md:basis-[280px] lg:basis-[300px] xl:basis-[320px] h-full"
+                  className="pl-2 sm:pl-3 md:pl-3 lg:pl-3 basis-[90%] sm:basis-[75%] md:basis-[280px] lg:basis-[300px] xl:basis-[320px] h-full "
                 >
                   <motion.div
                     className="relative group h-full flex flex-col cursor-pointer"
@@ -225,7 +237,7 @@ export function HeroSection() {
                     whileHover={{ y: 0 }}
                   >
                     <motion.div
-                      className="relative w-full h-[380px] sm:h-[380px] md:h-[380px] lg:h-[380px] xl:h-[400px] overflow-hidden rounded-sm"
+                      className="relative w-full h-[380px] sm:h-[380px] md:h-[380px] lg:h-[380px] xl:h-[400px] overflow-hidden rounded-2xl border-4 border-black"
                       whileHover={{ scale: 1 }}
                       transition={{ duration: 0.4 }}
                     >
@@ -294,7 +306,7 @@ export function HeroSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="absolute bottom-0 right-0 sm:right-4 md:right-6 lg:right-8 xl:right-12 flex gap-2 sm:gap-3 z-10">
+            <div className="absolute bottom-[-50px] right-0 sm:right-4 md:right-6 lg:right-8 xl:right-12 flex gap-2 sm:gap-3 z-10">
               <CarouselPrevious className="relative -right-0 -bottom-0 translate-y-0 translate-x-0 h-9 w-9 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-full bg-black/10 hover:bg-black/20 border-black/20 text-black backdrop-blur-sm shadow-sm transition-all" />
               <CarouselNext className="relative -right-0 -bottom-0 translate-y-0 translate-x-0 h-9 w-9 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-full bg-black/10 hover:bg-black/20 border-black/20 text-black backdrop-blur-sm shadow-sm transition-all" />
             </div>
