@@ -217,7 +217,7 @@ export function Footer() {
                   className="flex items-center gap-2 hover:text-black transition-colors group"
                 >
                   <Phone className="w-4 h-4 text-yellow group-hover:scale-110 transition-transform" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 98260 80999</span>
                 </a>
               </motion.li>
             </ul>

@@ -14,93 +14,106 @@ interface GalleryImage {
 }
 
 const galleryImages: GalleryImage[] = [
-  {
-    id: '1',
-    title: 'Cozy Common Area',
-    category: 'Common Spaces',
-    imageUrl: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=800&fit=crop',
-    aspectRatio: 'square',
-  },
+  
   {
     id: '2',
     title: 'Modern Room Interior',
-    category: 'Rooms',
-    imageUrl: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=1200&fit=crop',
+    category: 'interior',
+    imageUrl: '/images/room3.jpeg',
     aspectRatio: 'portrait',
   },
   {
+    id: '2.1',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/galleryroom2.jpeg',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: '2.2',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/galleryroom9.jpeg',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: '2.3',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/galleryroom3.jpeg',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: '2.4',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/galleryroom4.jpeg',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: '2.5',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/galleryroom5.jpeg',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: '2.6',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/galleryroom6.jpeg',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: '2.7',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/galleryroom7.jpeg',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: '2.8',
+    title: 'Modern Room Interior',
+    category: 'interior',
+    imageUrl: '/images/galleryroom8.jpeg',
+    aspectRatio: 'portrait',
+  },
+  
+  {
     id: '3',
     title: 'Rooftop Terrace',
-    category: 'Outdoor',
-    imageUrl: 'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=1200&h=800&fit=crop',
+    category: 'exterior',
+    imageUrl: '/images/office.jpeg',
     aspectRatio: 'landscape',
   },
   {
     id: '4',
     title: 'Shared Kitchen',
-    category: 'Common Spaces',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=800&fit=crop',
+    category: 'mess',
+    imageUrl: '/images/mess2.jpeg',
     aspectRatio: 'square',
   },
   {
     id: '5',
     title: 'Social Events Space',
-    category: 'Common Spaces',
-    imageUrl: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&h=1200&fit=crop',
+    category: 'interior',
+    imageUrl: '/images/galleryroom2.jpeg',
     aspectRatio: 'portrait',
   },
   {
     id: '6',
     title: 'City Views',
-    category: 'Views',
-    imageUrl: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&h=800&fit=crop',
+    category: 'exterior',
+    imageUrl: '/images/lift.jpeg',
     aspectRatio: 'landscape',
   },
-  {
-    id: '7',
-    title: 'Comfortable Bedroom',
-    category: 'Rooms',
-    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop',
-    aspectRatio: 'square',
-  },
-  {
-    id: '8',
-    title: 'Study Area',
-    category: 'Common Spaces',
-    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=1200&fit=crop',
-    aspectRatio: 'portrait',
-  },
-  {
-    id: '9',
-    title: 'Evening Ambiance',
-    category: 'Rooms',
-    imageUrl: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=1200&h=800&fit=crop',
-    aspectRatio: 'landscape',
-  },
-  {
-    id: '10',
-    title: 'Relaxation Zone',
-    category: 'Common Spaces',
-    imageUrl: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=800&fit=crop',
-    aspectRatio: 'square',
-  },
-  {
-    id: '11',
-    title: 'Balcony View',
-    category: 'Views',
-    imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=1200&fit=crop',
-    aspectRatio: 'portrait',
-  },
-  {
-    id: '12',
-    title: 'Dining Area',
-    category: 'Common Spaces',
-    imageUrl: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=1200&h=800&fit=crop',
-    aspectRatio: 'landscape',
-  },
+
+  
+ 
+ 
 ];
 
-const categories = ['All', 'Rooms', 'Common Spaces', 'Outdoor', 'Views'];
+const categories = ['All', 'interior', 'exterior', 'mess'];
 
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');

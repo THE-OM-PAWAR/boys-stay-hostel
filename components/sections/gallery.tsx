@@ -21,44 +21,32 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: '1',
-    title: 'Cozy Common Area',
-    imageUrl: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&h=800&fit=crop',
+    title: 'Modern Rooms',
+    imageUrl: '/images/room3.jpeg',
   },
   {
     id: '2',
-    title: 'Modern Rooms',
-    imageUrl: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=800&fit=crop',
+    title: 'Mess area',
+    imageUrl: '/images/mess2.jpeg',
   },
   {
     id: '3',
     title: 'Rooftop Terrace',
-    imageUrl: 'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=600&h=800&fit=crop',
+    imageUrl: '/images/office.jpeg',
   },
   {
     id: '4',
-    title: 'Shared Kitchen',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=800&fit=crop',
+    title: 'City Views',
+    imageUrl: '/images/lift.jpeg',
   },
   {
     id: '5',
     title: 'Social Events',
-    imageUrl: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&h=800&fit=crop',
+    imageUrl: '/images/galleryroom2.jpeg',
   },
-  {
-    id: '6',
-    title: 'City Views',
-    imageUrl: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=800&fit=crop',
-  },
-  {
-    id: '7',
-    title: 'Dormitory Spaces',
-    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=800&fit=crop',
-  },
-  {
-    id: '8',
-    title: 'Recreation Room',
-    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=800&fit=crop',
-  },
+  
+ 
+
 ];
 
 export function GallerySection() {
