@@ -255,12 +255,18 @@ export default function RoomsPage() {
                         className="w-full bg-black hover:bg-gray-800 text-white font-medium py-6 rounded-xl transition-all duration-300 group/btn"
                         asChild
                       >
-                        <Link href="/">
+                        <a
+                          href={`https://wa.me/919826080999?text=${encodeURIComponent(
+                            `Hi, I would like to book the following room at Haven Hostel:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\n\nPlease provide details about the booking process.`
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <span className="flex items-center justify-center gap-2">
                             Book Now
                             <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                           </span>
-                        </Link>
+                        </a>
                       </Button>
                     </motion.div>
                   </div>

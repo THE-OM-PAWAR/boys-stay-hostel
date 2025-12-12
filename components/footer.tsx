@@ -8,8 +8,8 @@ import { motion } from 'framer-motion';
 export function Footer() {
   const quickLinks = [
     { href: '/#about', label: 'About Us' },
-    { href: '/#rooms', label: 'Our Rooms' },
-    { href: '/#gallery', label: 'Gallery' },
+    { href: '/rooms', label: 'Our Rooms' },
+    { href: '/gallery', label: 'Gallery' },
     { href: '/#amenities', label: 'Amenities' },
     { href: '/#places-nearby', label: 'Places Nearby' },
   ];

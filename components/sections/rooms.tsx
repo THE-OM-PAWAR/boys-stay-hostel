@@ -247,13 +247,17 @@ export function RoomsSection() {
                           ))}
                         </div>
 
-                        <Link
-                          href="/rooms"
+                        <a
+                          href={`https://wa.me/919826080999?text=${encodeURIComponent(
+                            `Hi, I would like to enquire about the room at Haven Hostel:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\nDescription: ${room.description}\n\nPlease provide more details about the availability and booking process.`
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="mt-auto w-full py-2.5 px-4 bg-yellow hover:bg-yellow/90 text-black text-sm font-medium rounded-lg transition-colors duration-200 flex items-center justify-center gap-1.5 group/btn shadow-sm shadow-yellow/20"
                         >
-                          View
+                          Enquire
                           <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" />
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </motion.div>

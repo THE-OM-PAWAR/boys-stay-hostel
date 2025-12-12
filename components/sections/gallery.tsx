@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, ZoomIn, Camera } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import {
   Carousel,
   CarouselContent,
@@ -167,16 +168,25 @@ export function GallerySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
-            Want to see more? Check out our full photo gallery.
-          </p>
-          <Link
-            href="/gallery"
-            className="inline-flex items-center gap-2 text-black font-semibold hover:text-yellow transition-colors group"
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
-            View All Photos
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+            <Button
+              size="lg"
+              className="group bg-yellow hover:bg-yellow/90 text-black font-medium px-8 py-6 rounded-full shadow-lg shadow-yellow/20 hover:shadow-xl hover:shadow-yellow/30 transition-all duration-300 hover:scale-105 active:scale-95"
+              asChild
+            >
+              <Link href="/gallery">
+                <span className="flex items-center gap-2">
+                  Explore More
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
     </section>
