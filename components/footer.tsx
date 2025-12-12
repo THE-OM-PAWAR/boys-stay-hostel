@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Home, Mail, Instagram, Facebook, Twitter, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -84,18 +85,23 @@ export function Footer() {
           <motion.div variants={itemVariants} className="sm:col-span-2 lg:col-span-1">
             <Link
               href="/"
-              className="flex items-center gap-2 text-xl sm:text-2xl font-bold mb-4 group"
+              className="flex items-center mb-4 group"
             >
               <motion.div
-                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
-                className="w-8 h-8 rounded-lg bg-yellow/10 flex items-center justify-center group-hover:bg-yellow/20 transition-colors"
+                className="relative h-12 sm:h-16 w-auto mix-blend-hard-light"
               >
-                <Home className="w-5 h-5 text-yellow" />
+                <Image
+                  src="/logo mini.svg"
+                  alt="Haven Hostel"
+                  width={441}
+                  height={179}
+                  className="h-full w-auto object-contain mix-blend-hard-light"
+                  priority
+                />
               </motion.div>
-              <span className="bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
-                Haven Hostel
-              </span>
             </Link>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6 max-w-sm">
               Your home away from home. Experience comfort, community, and
