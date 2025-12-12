@@ -26,36 +26,30 @@ const rooms: Room[] = [
     title: 'NOTES ON VISION',
     description: 'Modern minimalist design with panoramic city views',
     imageCount: 5,
-    imageUrl: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=600&fit=crop',
+    imageUrl: '/images/mess2.jpeg',
   },
   {
     id: '2',
     title: 'UNDESERVED',
     description: 'Spacious rooms with premium amenities and comfort',
     imageCount: 10,
-    imageUrl: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop',
+    imageUrl: '/images/lift.jpeg',
   },
   {
     id: '3',
     title: 'FLORENCE',
     description: 'Elegant interiors inspired by European architecture',
     imageCount: 2,
-    imageUrl: 'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=800&h=600&fit=crop',
+    imageUrl: '/images/office.jpeg',
   },
   {
     id: '4',
     title: 'COHERENCE',
     description: 'Thoughtfully designed spaces for the modern traveler',
     imageCount: 13,
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop',
+    imageUrl: '/images/room3.jpeg',
   },
-  {
-    id: '5',
-    title: 'SERENITY',
-    description: 'Peaceful retreat with natural light and tranquility',
-    imageCount: 8,
-    imageUrl: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&h=600&fit=crop',
-  },
+
 ];
 
 export function HeroSection() {
