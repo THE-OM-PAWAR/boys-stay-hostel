@@ -17,7 +17,7 @@ export function AboutSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=600&fit=crop"
+              src="/about.png"
               alt="Haven Hostel"
               fill
               className="object-cover"

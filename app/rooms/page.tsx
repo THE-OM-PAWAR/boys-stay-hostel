@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Bed, Users, Wifi, Coffee, Image as ImageIcon, Star } from 'lucide-react';
+import { ArrowRight, Bed, Users } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -9,65 +9,50 @@ import { Card } from '@/components/ui/card';
 
 interface Room {
   id: string;
-  title: string;
+  name: string;
+  type: string;
   description: string;
-  imageCount: number;
-  imageUrl: string;
-  price: number;
   capacity: string;
-  rating: number;
+  features: string[];
+  image?: string;
 }
 
 const rooms: Room[] = [
   {
     id: '1',
-    title: 'NOTES ON VISION',
-    description: 'Modern minimalist design with panoramic city views',
-    imageCount: 5,
-    imageUrl: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=600&fit=crop',
-    price: 89,
-    capacity: '2 Guests',
-    rating: 4.8,
+    name: 'Double Sharing',
+    type: 'double sharing',
+    description: 'Comfortable and air-conditioned room for two residents, equipped with comfortable beds, personal storage, and all essential amenities for a relaxed stay.',
+    capacity: '2 beds',
+    features: ['Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
+    image: '/images/galleryroom8.jpeg',
   },
   {
     id: '2',
-    title: 'UNDESERVED',
-    description: 'Spacious rooms with premium amenities and comfort',
-    imageCount: 10,
-    imageUrl: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop',
-    price: 125,
-    capacity: '4 Guests',
-    rating: 4.9,
+    name: 'Triple Sharing',
+    type: 'triple sharing',
+    description: 'Spacious room for three residents, equipped with comfortable beds, personal storage, and all essential amenities for a relaxed stay.',
+    capacity: '3 beds',
+    features: ['Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
+    image: '/images/room3.jpeg',
   },
   {
     id: '3',
-    title: 'FLORENCE',
-    description: 'Elegant interiors inspired by European architecture',
-    imageCount: 2,
-    imageUrl: 'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=800&h=600&fit=crop',
-    price: 95,
-    capacity: '2 Guests',
-    rating: 4.7,
+    name: 'Double Sharing AC Room',
+    type: 'double sharing',
+    description: 'Air-conditioned room for two residents with individual beds, personal storage, and all essential amenities for a comfortable stay.',
+    capacity: '2 beds',
+    features: ['AC', 'Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
+    image: '/images/galleryroom2.jpeg',
   },
   {
     id: '4',
-    title: 'COHERENCE',
-    description: 'Thoughtfully designed spaces for the modern traveler',
-    imageCount: 13,
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop',
-    price: 110,
-    capacity: '3 Guests',
-    rating: 4.9,
-  },
-  {
-    id: '5',
-    title: 'SERENITY',
-    description: 'Peaceful retreat with natural light and tranquility',
-    imageCount: 8,
-    imageUrl: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&h=600&fit=crop',
-    price: 75,
-    capacity: '2 Guests',
-    rating: 4.6,
+    name: 'Triple Sharing AC Room',
+    type: 'triple sharing',
+    description: 'Spacious and air-conditioned room for three residents, equipped with comfortable beds, personal storage, and all essential amenities for a relaxed stay.',
+    capacity: '3 beds',
+    features: ['AC', 'Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
+    image: '/images/room101.png',
   },
 ];
 
@@ -183,49 +168,29 @@ export default function RoomsPage() {
               >
                 <Card className="overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white group">
                   {/* Image Container */}
-                  <div className="relative h-[280px] sm:h-[320px] overflow-hidden">
-                    <Image
-                      src={room.imageUrl}
-                      alt={room.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      unoptimized
-                    />
+                  <div className="relative h-[280px] sm:h-[320px] overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                    {room.image ? (
+                      <Image
+                        src={room.image}
+                        alt={room.name}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Bed className="w-12 h-12 text-gray-300" />
+                      </div>
+                    )}
                     
-                    {/* Price Badge */}
+                    {/* Type Badge */}
                     <motion.div
                       className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: index * 0.1 + 0.2, duration: 0.4 }}
                     >
-                      <div className="flex items-baseline gap-1">
-                        <span className="text-2xl font-bold text-black">${room.price}</span>
-                        <span className="text-xs text-gray-500 font-medium">/night</span>
-                      </div>
-                    </motion.div>
-
-                    {/* Rating Badge */}
-                    <motion.div
-                      className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-1.5"
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 + 0.3, duration: 0.4 }}
-                    >
-                      <Star className="w-3.5 h-3.5 fill-yellow text-yellow" />
-                      <span className="text-sm font-semibold text-white">{room.rating}</span>
-                    </motion.div>
-
-                    {/* Image Count Badge */}
-                    <motion.div
-                      className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-1.5"
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 + 0.4, duration: 0.4 }}
-                    >
-                      <ImageIcon className="w-3.5 h-3.5 text-gray-600" />
-                      <span className="text-xs font-medium text-gray-700">{room.imageCount}</span>
+                      <span className="text-sm font-semibold text-black capitalize">{room.type}</span>
                     </motion.div>
                   </div>
 
@@ -239,7 +204,7 @@ export default function RoomsPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 + 0.5, duration: 0.4 }}
                       >
-                        {room.title}
+                        {room.name}
                       </motion.h3>
                       <motion.p
                         className="text-sm text-gray-600 leading-relaxed"
@@ -251,9 +216,9 @@ export default function RoomsPage() {
                       </motion.p>
                     </div>
 
-                    {/* Features */}
+                    {/* Capacity and Features */}
                     <motion.div
-                      className="flex items-center gap-4 pt-2 border-t border-gray-100"
+                      className="space-y-3 pt-2 border-t border-gray-100"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: index * 0.1 + 0.7, duration: 0.4 }}
@@ -262,13 +227,20 @@ export default function RoomsPage() {
                         <Users className="w-4 h-4" />
                         <span className="text-xs font-medium">{room.capacity}</span>
                       </div>
-                      <div className="flex items-center gap-1.5 text-gray-600">
-                        <Wifi className="w-4 h-4" />
-                        <span className="text-xs font-medium">WiFi</span>
-                      </div>
-                      <div className="flex items-center gap-1.5 text-gray-600">
-                        <Coffee className="w-4 h-4" />
-                        <span className="text-xs font-medium">Kitchen</span>
+                      <div className="flex flex-wrap gap-2">
+                        {room.features.slice(0, 4).map((feature, i) => (
+                          <span
+                            key={i}
+                            className="px-2.5 py-1 text-xs bg-yellow/10 text-gray-700 rounded-md border border-yellow/20 font-medium"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                        {room.features.length > 4 && (
+                          <span className="px-2.5 py-1 text-xs text-gray-500 font-medium">
+                            +{room.features.length - 4} more
+                          </span>
+                        )}
                       </div>
                     </motion.div>
 
