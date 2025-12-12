@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -71,29 +72,23 @@ export function Navigation() {
           <motion.div variants={itemVariants}>
             <Link
               href="/"
-              className="flex items-center gap-2 text-lg sm:text-xl font-semibold text-black group"
+              className="flex items-center group"
             >
               <motion.div
-                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
+                className="relative h-10 sm:h-12 w-auto"
               >
-                <Home className="w-5 h-5 sm:w-6 sm:h-6 transition-colors group-hover:text-yellow" />
+                <Image
+                  src="/logo.svg"
+                  alt="Haven Hostel"
+                  width={291}
+                  height={99}
+                  className="h-full w-auto object-contain mix-blend-hard-light"
+                  priority
+                />
               </motion.div>
-              <motion.span
-                className="hidden sm:inline"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-              >
-                Haven Hostel
-              </motion.span>
-              <motion.span
-                className="sm:hidden"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-              >
-                Haven
-              </motion.span>
             </Link>
           </motion.div>
 

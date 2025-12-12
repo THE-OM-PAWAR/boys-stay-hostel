@@ -67,20 +67,6 @@ export function PlacesNearbySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Decorative background element */}
-          <motion.div
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-yellow/5 blur-3xl -z-10"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
-
           {/* Main Heading */}
           <motion.h2
             className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 relative inline-block"

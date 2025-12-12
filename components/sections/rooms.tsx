@@ -13,48 +13,58 @@ import { Bed, Users, Wifi, Coffee, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Room {
   id: string;
   name: string;
   type: string;
   description: string;
-  price: string;
   capacity: string;
   features: string[];
+  image?: string;
 }
 
 const allRooms: Room[] = [
   {
     id: '1',
-    name: 'Shared Dorm',
-    type: 'Shared',
-    description: 'Perfect for solo travelers looking to meet new people',
-    price: '$25',
-    capacity: '6-8 beds',
-    features: ['Free WiFi', 'Shared Bathroom', 'Lockers', 'Common Area'],
+    name: 'Double Sharing',
+    type: 'double sharing',
+    description: 'Comfortable and air-conditioned room for two residents, equipped with comfortable beds, personal storage, and all essential amenities for a relaxed stay.',
+    capacity: '2 beds',
+    features: ['Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
+    image: '/images/galleryroom8.jpeg',
   },
   {
     id: '2',
-    name: 'Private Room',
-    type: 'Private',
-    description: 'Your own space with all the hostel perks',
-    price: '$60',
-    capacity: '2 beds',
-    features: ['Free WiFi', 'Private Bathroom', 'Workspace', 'Mini Fridge'],
+    name: 'Triple Sharing',
+    type: 'triple sharing',
+    description: 'Spacious room for three residents, equipped with comfortable beds, personal storage, and all essential amenities for a relaxed stay.',
+    capacity: '3 beds',
+    features: ['Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
+    image: '/images/galleryroom9.jpeg',
   },
   {
     id: '3',
-    name: 'Deluxe Suite',
-    type: 'Suite',
-    description: 'Premium comfort with stunning city views',
-    price: '$95',
-    capacity: '2-4 beds',
-    features: ['Free WiFi', 'Ensuite Bath', 'City View', 'Kitchenette'],
+    name: 'Double Sharing AC Room',
+    type: 'double sharing',
+    description: 'Air-conditioned room for two residents with individual beds, personal storage, and all essential amenities for a comfortable stay.',
+    capacity: '2 beds',
+    features: ['AC', 'Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
+    image: '/images/galleryroom2.jpeg',
+  },
+  {
+    id: '4',
+    name: 'Triple Sharing AC Room',
+    type: 'triple sharing',
+    description: 'Spacious and air-conditioned room for three residents, equipped with comfortable beds, personal storage, and all essential amenities for a relaxed stay.',
+    capacity: '3 beds',
+    features: ['AC', 'Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
+    image: '/images/room101.png',
   },
 ];
 
-const roomTypes = ['All', 'Shared', 'Private', 'Suite'];
+const roomTypes = ['All', 'double sharing', 'triple sharing'];
 
 export function RoomsSection() {
   const [selectedType, setSelectedType] = useState('All');
@@ -184,11 +194,24 @@ export function RoomsSection() {
                       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow to-yellow/80" />
                       
                       {/* Image */}
-                      <div className="relative h-40 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <Bed className="w-8 h-8 text-gray-300 group-hover:text-yellow/60 transition-colors duration-300" />
-                        </div>
-                        <div className="absolute top-3 right-3">
+                      <div className="relative h-80 sm:h-80 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+                        {room.image ? (
+                          <>
+                            <Image
+                              src={room.image}
+                              alt={room.name}
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-700"
+                              sizes="(max-width: 640px) 280px, 300px"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          </>
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <Bed className="w-8 h-8 text-gray-300 group-hover:text-yellow/60 transition-colors duration-300" />
+                          </div>
+                        )}
+                        <div className="absolute top-3 right-3 z-10">
                           <span className="px-2.5 py-1 text-xs font-medium bg-yellow text-black rounded-full shadow-sm">
                             {room.type}
                           </span>
@@ -206,12 +229,7 @@ export function RoomsSection() {
                           </p>
                         </div>
 
-                        <div className="flex items-baseline gap-1 mb-3">
-                          <span className="text-2xl font-bold text-black">
-                            {room.price}
-                          </span>
-                          <span className="text-xs text-gray-400">/night</span>
-                        </div>
+
 
                         <div className="flex items-center gap-1.5 text-xs text-gray-500 mb-3">
                           <Users className="w-3.5 h-3.5 text-yellow" />

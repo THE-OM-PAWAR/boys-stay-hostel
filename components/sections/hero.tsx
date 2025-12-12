@@ -22,32 +22,39 @@ interface Room {
 
 const rooms: Room[] = [
   {
+    id: '0',
+    title: "Boys' Stay Hostel",
+    description: 'Spacious, secure, and comfortable living for students in the heart of the city',
+    imageCount: 6,
+    imageUrl: '/hero.png',
+  },
+  {
     id: '1',
-    title: 'NOTES ON VISION',
-    description: 'Modern minimalist design with panoramic city views',
+    title: 'Mess Facility',
+    description: 'Nutritious and delicious meals provided daily in our on-site mess',
     imageCount: 5,
     imageUrl: '/images/mess2.jpeg',
   },
   {
-    id: '2',
-    title: 'UNDESERVED',
-    description: 'Spacious rooms with premium amenities and comfort',
+      id: '2',
+      title: 'Lift Facility',
+      description: 'Convenient lift access to all floors',
     imageCount: 10,
     imageUrl: '/images/lift.jpeg',
   },
   {
     id: '3',
-    title: 'FLORENCE',
-    description: 'Elegant interiors inspired by European architecture',
+    title: 'Hostels Office',
+    description: 'Hostels Office for any queries or assistance',
     imageCount: 2,
     imageUrl: '/images/office.jpeg',
   },
   {
     id: '4',
-    title: 'COHERENCE',
-    description: 'Thoughtfully designed spaces for the modern traveler',
+    title: 'Luxurious Rooms',
+    description: 'Spacious and comfortable rooms with modern amenities',
     imageCount: 13,
-    imageUrl: '/images/room3.jpeg',
+    imageUrl: '/images/galleryroom9.jpeg',
   },
 
 ];
