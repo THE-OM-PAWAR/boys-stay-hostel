@@ -32,7 +32,7 @@ export function GirlsHostelSection() {
             {/* Main Image - Smaller */}
             <div className="relative h-48 sm:h-56 md:h-full w-full rounded-2xl md:rounded-none overflow-hidden mt-6 sm:mt-8 md:mt-0">
               <Image
-                src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=600&fit=crop"
+                src="/images/girlsstay.jpeg"
                 alt="Jain's Girl's Stay Hostel"
                 fill
                 className="object-cover"
