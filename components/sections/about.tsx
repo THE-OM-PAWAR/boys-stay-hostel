@@ -10,7 +10,7 @@ export function AboutSection() {
         <div className="grid md:grid-cols-2 gap-4 sm:gap-8 md:gap-12 items-center">
           {/* Image */}
           <motion.div
-            className="relative h-[200px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden"
+            className="relative h-[230px] sm:h-[300px] md:h-[360px] rounded-lg overflow-hidden"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
