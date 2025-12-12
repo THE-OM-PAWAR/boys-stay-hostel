@@ -82,7 +82,7 @@ export function Navigation() {
               >
                 <Image
                   src="/logo.svg"
-                  alt="Haven Hostel"
+                  alt="Boys Stay Hostel"
                   width={291}
                   height={99}
                   className="h-full w-auto object-contain mix-blend-hard-light"

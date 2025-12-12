@@ -257,7 +257,7 @@ export default function RoomsPage() {
                       >
                         <a
                           href={`https://wa.me/919826080999?text=${encodeURIComponent(
-                            `Hi, I would like to book the following room at Haven Hostel:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\n\nPlease provide details about the booking process.`
+                            `Hi, I would like to book the following room at Boys Stay Hostel:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\n\nPlease provide details about the booking process.`
                           )}`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -300,7 +300,7 @@ export default function RoomsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.1, duration: 0.6 }}
             >
-              Experience comfort, community, and unforgettable memories at Haven Hostel.
+              Experience comfort, community, and unforgettable memories at Boys Stay Hostel.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

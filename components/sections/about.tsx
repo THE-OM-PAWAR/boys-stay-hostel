@@ -18,7 +18,7 @@ export function AboutSection() {
           >
             <Image
               src="/about.png"
-              alt="Haven Hostel"
+              alt="Boys Stay Hostel"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -42,7 +42,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              About Haven
+              About Boys Stay Hostel
             </motion.h2>
             <motion.div
               className="w-10 sm:w-12 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"
@@ -67,7 +67,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              Founded in 2018, Haven Hostel was born from a passion for bringing travelers together. Nestled in the heart of the city, we offer a home away from home where every traveler feels welcomed and valued.
+              Founded in 2018, Boys Stay Hostel was born from a passion for bringing travelers together. Nestled in the heart of the city, we offer a home away from home where every traveler feels welcomed and valued.
             </motion.p>
           </motion.div>
         </div>

@@ -95,7 +95,7 @@ export function Footer() {
               >
                 <Image
                   src="/logo mini.svg"
-                  alt="Haven Hostel"
+                  alt="Boys Stay Hostel"
                   width={441}
                   height={179}
                   className="h-full w-auto object-contain mix-blend-hard-light"
@@ -199,11 +199,11 @@ export function Footer() {
                 transition={{ duration: 0.3, delay: 0.7 }}
               >
                 <a
-                  href="mailto:hello@havenhostel.com"
+                  href="mailto:hello@Boys Stayhostel.com"
                   className="flex items-center gap-2 hover:text-black transition-colors group"
                 >
                   <Mail className="w-4 h-4 text-yellow group-hover:scale-110 transition-transform" />
-                  <span>hello@havenhostel.com</span>
+                  <span>hello@Boys Stayhostel.com</span>
                 </a>
               </motion.li>
               <motion.li
@@ -233,7 +233,7 @@ export function Footer() {
           transition={{ duration: 0.5, delay: 0.9 }}
         >
           <p className="text-sm text-gray-600">
-            © {new Date().getFullYear()} Haven Hostel. All rights reserved.
+            © {new Date().getFullYear()} Boys Stay Hostel. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 sm:gap-6 text-sm text-gray-600 justify-center">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item, index) => (

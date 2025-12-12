@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Haven Hostel - Your Home Away From Home',
+  title: 'Boys Stay Hostel - Your Home Away From Home',
   description:
     'Experience comfortable, affordable stays in the heart of the city. Connect with travelers from around the world.',
 };

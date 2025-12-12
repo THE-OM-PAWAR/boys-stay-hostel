@@ -28,7 +28,7 @@ export default function ContactPage() {
 ${formData.message}
 
 ---
-Sent from Haven Hostel Contact Form`;
+Sent from Boys Stay Hostel Contact Form`;
 
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
@@ -268,10 +268,10 @@ Sent from Haven Hostel Contact Form`;
                     Email Us
                   </h3>
                   <a
-                    href="mailto:hello@havenhostel.com"
+                    href="mailto:hello@Boys Stayhostel.com"
                     className="text-sm text-gray-700 hover:text-yellow transition-colors duration-300 font-medium block"
                   >
-                    hello@havenhostel.com
+                    hello@Boys Stayhostel.com
                   </a>
                   <div className="mt-3 pt-3 border-t border-gray-100">
                     <motion.div
@@ -552,7 +552,7 @@ Sent from Haven Hostel Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.5 }}
           >
-            Don't wait! Secure your spot at Haven Hostel today.
+            Don't wait! Secure your spot at Boys Stay Hostel today.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
