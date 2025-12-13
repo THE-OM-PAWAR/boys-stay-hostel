@@ -268,7 +268,7 @@ export function HeroSection() {
                     >
                       <Image
                         src={room.imageUrl}
-                        alt={`${room.title} - Jain's boys Stay Hostel Bhopal MP Nagar`}
+                        alt={`${room.title} - Jain's boys Stay Bhopal MP Nagar`}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                         sizes="(max-width: 640px) 90vw, (max-width: 768px) 75vw, (max-width: 1024px) 280px, (max-width: 1280px) 300px, 320px"

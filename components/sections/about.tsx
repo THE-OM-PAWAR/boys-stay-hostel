@@ -18,7 +18,7 @@ export function AboutSection() {
           >
             <Image
               src="/about.png"
-              alt="Best Hostel in Bhopal MP Nagar - Jain's boys Stay Hostel Interior"
+              alt="Best Hostel in Bhopal MP Nagar - Jain's boys Stay Interior"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -42,7 +42,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              Best Hostel in Bhopal - Jain's boys Stay Hostel MP Nagar
+              Best Hostel in Bhopal - Jain's boys Stay MP Nagar
             </motion.h2>
             <motion.div
               className="w-10 sm:w-12 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"
@@ -58,7 +58,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              Jain's boys Stay Hostel is the <strong>best luxury boys hostel in Bhopal</strong>, strategically located in <strong>MP Nagar</strong>. We offer <strong>fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, CCTV surveillance, lift facility, power backup, and pick & drop facility</strong>. Our <strong>boys hostel in MP Nagar</strong> provides a comfortable and safe environment for students and working professionals.
+              Jain's boys Stay is the <strong>best luxury boys hostel in Bhopal</strong>, strategically located in <strong>MP Nagar</strong>. We offer <strong>fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, CCTV surveillance, lift facility, power backup, and pick & drop facility</strong>. Our <strong>boys hostel in MP Nagar</strong> provides a comfortable and safe environment for students and working professionals.
             </motion.p>
             <motion.p
               className="text-xs sm:text-sm md:text-base font-extralight text-gray-500 leading-relaxed"
@@ -67,7 +67,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              Located at <strong>Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar, Bhopal - 462011</strong>, Jain's boys Stay Hostel has established itself as a <strong>top hostel near MP Nagar Bhopal</strong>. We provide <strong>secure boys hostel Bhopal</strong> facilities with 24/7 security guard, CCTV camera surveillance, AC rooms, pure veg hygienic food, free WiFi, lift access, and modern amenities. Our <strong>affordable boys hostel MP Nagar</strong> ensures every resident feels at home while maintaining the highest standards of comfort and safety.
+              Located at <strong>Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar, Bhopal - 462011</strong>, Jain's boys Stay has established itself as a <strong>top hostel near MP Nagar Bhopal</strong>. We provide <strong>secure boys hostel Bhopal</strong> facilities with 24/7 security guard, CCTV camera surveillance, AC rooms, pure veg hygienic food, free WiFi, lift access, and modern amenities. Our <strong>affordable boys hostel MP Nagar</strong> ensures every resident feels at home while maintaining the highest standards of comfort and safety.
             </motion.p>
           </motion.div>
         </div>

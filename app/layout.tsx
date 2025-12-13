@@ -16,11 +16,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://boyshostelbhopal.co
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Best Hostel in Bhopal | Jain's boys Stay Hostel MP Nagar - Luxury & Secure Accommodation",
-    template: "%s | Jain's boys Stay Hostel Bhopal"
+    default: "Best Hostel in Bhopal | Jain's boys Stay MP Nagar - Luxury & Secure Accommodation",
+    template: "%s | Jain's boys Stay Bhopal"
   },
   description:
-    "Jain's boys Stay Hostel - Best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security. Top-rated hostel near MP Nagar Bhopal. Book now!",
+    "Jain's boys Stay - Best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security. Top-rated hostel near MP Nagar Bhopal. Book now!",
   keywords: [
     'best hostel in bhopal',
     'hostel in bhopal',
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     'boys pg in bhopal',
     'hostel with mess bhopal',
     'affordable hostel bhopal',
-    'jains boys Stay Hostel',
-    'jains boys Stay Hostel bhopal',
-    'jains boys Stay Hostel mp nagar',
+    'jains boys stay',
+    'jains boys stay bhopal',
+    'jains boys stay mp nagar',
     'ac rooms hostel bhopal',
     'air conditioned hostel bhopal',
     'hostel with gym bhopal',
@@ -90,8 +90,8 @@ export const metadata: Metadata = {
     'boys hostel booking bhopal',
     'hostel for students bhopal',
     'hostel for working professionals bhopal',
-    'boys Stay Hostel bhopal',
-    'boys Stay Hostel mp nagar',
+    'boys stay bhopal',
+    'boys stay mp nagar',
     'best boys pg bhopal',
     'boys paying guest bhopal',
     'hostel facilities bhopal',
@@ -100,9 +100,9 @@ export const metadata: Metadata = {
     'boys hostel plot 106 mp nagar',
     'hostel near navoday hospital bhopal'
   ],
-  authors: [{ name: "Jain's boys Stay Hostel" }],
-  creator: "Jain's boys Stay Hostel",
-  publisher: "Jain's boys Stay Hostel",
+  authors: [{ name: "Jain's boys Stay" }],
+  creator: "Jain's boys Stay",
+  publisher: "Jain's boys Stay",
   formatDetection: {
     email: false,
     address: false,
@@ -112,22 +112,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: siteUrl,
-    siteName: "Jain's boys Stay Hostel",
-    title: "Best Hostel in Bhopal | Jain's boys Stay Hostel MP Nagar - Luxury & Secure",
-    description: "Jain's boys Stay Hostel - Best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security. Top-rated hostel near MP Nagar Bhopal.",
+    siteName: "Jain's boys Stay",
+    title: "Best Hostel in Bhopal | Jain's boys Stay MP Nagar - Luxury & Secure",
+    description: "Jain's boys Stay - Best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security. Top-rated hostel near MP Nagar Bhopal.",
     images: [
       {
         url: `${siteUrl}/hero.png`,
         width: 1200,
         height: 630,
-        alt: "Jain's boys Stay Hostel - Best Hostel in Bhopal MP Nagar",
+        alt: "Jain's boys Stay - Best Hostel in Bhopal MP Nagar",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Best Hostel in Bhopal | Jain's boys Stay Hostel MP Nagar",
-    description: "Jain's boys Stay Hostel - Best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security.",
+    title: "Best Hostel in Bhopal | Jain's boys Stay MP Nagar",
+    description: "Jain's boys Stay - Best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security.",
     images: [`${siteUrl}/hero.png`],
   },
   robots: {

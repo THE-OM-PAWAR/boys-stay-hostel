@@ -11,8 +11,8 @@ import type { Metadata } from 'next';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://boyshostelbhopal.com';
 
 export const metadata: Metadata = {
-  title: "Best Hostel in Bhopal | Jain's boys Stay Hostel MP Nagar - Luxury & Secure Accommodation",
-  description: "Jain's boys Stay Hostel - Best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security. Top-rated hostel near MP Nagar Bhopal. Book now!",
+  title: "Best Hostel in Bhopal | Jain's boys Stay MP Nagar - Luxury & Secure Accommodation",
+  description: "Jain's boys Stay - Best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security. Top-rated hostel near MP Nagar Bhopal. Book now!",
   keywords: [
     'best hostel in bhopal',
     'boys hostel in mp nagar',
@@ -24,16 +24,16 @@ export const metadata: Metadata = {
     'boys hostel mp nagar'
   ],
   openGraph: {
-    title: "Best Hostel in Bhopal | Jain's boys Stay Hostel MP Nagar",
-    description: "Jain's boys Stay Hostel - Best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security.",
+    title: "Best Hostel in Bhopal | Jain's boys Stay MP Nagar",
+    description: "Jain's boys Stay - Best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security.",
     url: siteUrl,
-    siteName: "Jain's boys Stay Hostel",
+    siteName: "Jain's boys Stay",
     images: [
       {
         url: `${siteUrl}/hero.png`,
         width: 1200,
         height: 630,
-        alt: "Best Hostel in Bhopal MP Nagar - Jain's boys Stay Hostel",
+        alt: "Best Hostel in Bhopal MP Nagar - Jain's boys Stay",
       },
     ],
     locale: 'en_IN',

@@ -95,7 +95,7 @@ export function Footer() {
               >
                 <Image
                   src="/logo mini.svg"
-                  alt="Jain's boys Stay Hostel - A Luxury Boys Hostel"
+                  alt="Jain's boys Stay - A Luxury Boys Hostel"
                   width={441}
                   height={179}
                   className="h-full w-auto object-contain mix-blend-hard-light"
@@ -256,7 +256,7 @@ export function Footer() {
           transition={{ duration: 0.5, delay: 0.9 }}
         >
           <p className="text-sm text-gray-600">
-            © {new Date().getFullYear()} Jain's boys Stay Hostel. All rights reserved.
+            © {new Date().getFullYear()} Jain's boys Stay. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 sm:gap-6 text-sm text-gray-600 justify-center">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item, index) => (

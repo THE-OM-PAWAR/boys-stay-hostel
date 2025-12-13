@@ -424,7 +424,7 @@ export default function GalleryPage() {
                 <div className={`relative ${getAspectRatioClass()} overflow-hidden rounded-xl bg-gray-100`}>
                   <Image
                     src={image.imageUrl}
-                    alt={`${image.title} - Jain's boys Stay Hostel Bhopal MP Nagar`}
+                    alt={`${image.title} - Jain's boys Stay Bhopal MP Nagar`}
                     fill
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -487,7 +487,7 @@ export default function GalleryPage() {
             <div className="relative w-full h-[80vh] rounded-lg overflow-hidden">
               <Image
                 src={selectedImage.imageUrl}
-                alt={`${selectedImage.title} - Jain's boys Stay Hostel Bhopal MP Nagar`}
+                alt={`${selectedImage.title} - Jain's boys Stay Bhopal MP Nagar`}
                 fill
                 className="object-contain"
                 unoptimized

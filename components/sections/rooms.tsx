@@ -249,7 +249,7 @@ export function RoomsSection() {
 
                         <a
                           href={`https://wa.me/919826080999?text=${encodeURIComponent(
-                            `Hi, I would like to enquire about the room at Jain's boys Stay Hostel:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\nDescription: ${room.description}\n\nPlease provide more details about the availability and booking process.`
+                            `Hi, I would like to enquire about the room at Jain's boys Stay:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\nDescription: ${room.description}\n\nPlease provide more details about the availability and booking process.`
                           )}`}
                           target="_blank"
                           rel="noopener noreferrer"

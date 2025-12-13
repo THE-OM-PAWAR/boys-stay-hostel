@@ -15,10 +15,10 @@ export function LocalSeoSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-black">
-            Why Choose Jain's boys Stay Hostel - Best Hostel in Bhopal MP Nagar?
+            Why Choose Jain's Boy's Stay - Best Hostel in Bhopal MP Nagar?
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-            Experience the <strong>best hostel in Bhopal</strong> with premium facilities, secure accommodation, and affordable rates in the heart of <strong>MP Nagar</strong>.
+            Experience the best hostel in Bhopal with premium facilities, secure accommodation, and affordable rates in the heart of MP Nagar.
           </p>
         </motion.div>
 
@@ -30,11 +30,11 @@ export function LocalSeoSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-4 text-black">
+            <h3 className="text-2xl font-bold mb-4 text-black text-left">
               Best Hostel in Bhopal - MP Nagar Location
             </h3>
-            <p className="text-gray-600 mb-4 leading-relaxed">
-              Jain's boys Stay Hostel is strategically located in <strong>MP Nagar, Bhopal</strong>, making it the <strong>best hostel in Bhopal</strong> for students and working professionals. Our prime location offers easy access to:
+            <p className="text-gray-600 mb-4 leading-relaxed text-left">
+              Jain's Boy's Stay is strategically located in MP Nagar, Bhopal, making it the best hostel in Bhopal for students and working professionals. Our prime location offers easy access to:
             </p>
             <ul className="space-y-2 text-gray-600">
               <li className="flex items-start gap-2">
@@ -63,7 +63,7 @@ export function LocalSeoSection() {
               Secure Boys Hostel Bhopal
             </h3>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Safety is our top priority. Our <strong>secure boys hostel Bhopal</strong> provides:
+              Safety is our top priority. Our secure boys hostel Bhopal provides:
             </p>
             <ul className="space-y-2 text-gray-600">
               <li className="flex items-start gap-2">
@@ -83,53 +83,17 @@ export function LocalSeoSection() {
         </div>
 
         <motion.div
-          className="bg-gradient-to-br from-yellow/10 to-yellow/5 p-8 rounded-2xl border border-yellow/20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h3 className="text-2xl font-bold mb-6 text-black text-center">
-            Luxury Boys Hostel Bhopal - Premium Amenities
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: Wifi, title: 'Free High-Speed WiFi', desc: 'Uninterrupted internet connectivity' },
-              { icon: Utensils, title: 'Mess Facility', desc: 'Nutritious meals served daily' },
-              { icon: Star, title: 'AC Rooms', desc: 'Air-conditioned comfortable rooms' },
-              { icon: Users, title: 'Common Areas', desc: 'Spacious common rooms for relaxation' },
-            ].map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="bg-white p-5 rounded-lg shadow-md"
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                >
-                  <Icon className="w-8 h-8 text-yellow mb-3" />
-                  <h4 className="font-semibold text-black mb-2">{item.title}</h4>
-                  <p className="text-sm text-gray-600">{item.desc}</p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
-
-        <motion.div
           className="mt-12 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-lg text-gray-700 mb-4">
-            Looking for an <strong>affordable boys hostel MP Nagar</strong>? Jain's boys Stay Hostel offers the best value with premium facilities at competitive rates.
+          <p className="text-sm text-light text-gray-600 mb-4 text-left">
+            Looking for an affordable boys hostel MP Nagar? Jain's Boy's Stay offers the best value with premium facilities at competitive rates.
           </p>
-          <p className="text-base text-gray-600">
-            As the <strong>top hostel near MP Nagar Bhopal</strong>, we ensure your comfort, safety, and convenience. Book your stay at the <strong>best hostel in Bhopal</strong> today!
+          <p className="text-sm text-light text-gray-600 text-left">
+            As the top hostel near MP Nagar Bhopal, we ensure your comfort, safety, and convenience. Book your stay at the best hostel in Bhopal today!
           </p>
         </motion.div>
       </div>
