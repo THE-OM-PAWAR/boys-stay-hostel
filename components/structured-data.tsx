@@ -1,14 +1,14 @@
 export function StructuredData() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://boysstayhostel.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://boyshostelbhopal.com';
   
   // LocalBusiness structured data
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${siteUrl}#organization`,
-    name: "Jain's Boy's Stay",
-    alternateName: "Jain's Boy's Stay - A Luxury Boys Hostel",
-    description: "Best luxury boys hostel in Bhopal, MP Nagar. Jain's Boy's Stay offers fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, and pick & drop facility.",
+    name: "Jain's boys Stay Hostel",
+    alternateName: "Jain's boys Stay Hostel - A Luxury Boys Hostel",
+    description: "Best luxury boys hostel in Bhopal, MP Nagar. Jain's boys Stay Hostel offers fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, and pick & drop facility.",
     url: siteUrl,
     logo: `${siteUrl}/logo.svg`,
     image: [
@@ -135,8 +135,8 @@ export function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'LodgingBusiness',
     '@id': `${siteUrl}#lodging`,
-    name: "Jain's Boy's Stay",
-    description: "Best luxury boys hostel in Bhopal, MP Nagar. Jain's Boy's Stay offers fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, and pick & drop facility.",
+    name: "Jain's boys Stay Hostel",
+    description: "Best luxury boys hostel in Bhopal, MP Nagar. Jain's boys Stay Hostel offers fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, and pick & drop facility.",
     url: siteUrl,
     image: [
       `${siteUrl}/hero.png`,
@@ -287,23 +287,23 @@ export function StructuredData() {
         name: 'What is the best hostel in Bhopal?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "Jain's Boy's Stay is one of the best luxury hostels in Bhopal, located in MP Nagar. We offer fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, CCTV surveillance, lift facility, power backup, and pick & drop facility."
+          text: "Jain's boys Stay Hostel is one of the best luxury hostels in Bhopal, located in MP Nagar. We offer fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, CCTV surveillance, lift facility, power backup, and pick & drop facility."
         }
       },
       {
         '@type': 'Question',
-        name: "Where is Jain's Boy's Stay located?",
+        name: "Where is Jain's boys Stay Hostel located?",
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "Jain's Boy's Stay is located at Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar, Bhopal - 462011. We are conveniently located near Rani Kamlapati Station, ISBT Bus Stand, and DB City Mall."
+          text: "Jain's boys Stay Hostel is located at Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar, Bhopal - 462011. We are conveniently located near Rani Kamlapati Station, ISBT Bus Stand, and DB City Mall."
         }
       },
       {
         '@type': 'Question',
-        name: "What amenities are available at Jain's Boy's Stay?",
+        name: "What amenities are available at Jain's boys Stay Hostel?",
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "Jain's Boy's Stay offers fully air-cooled campus, AC rooms, gym, yoga room, RO water cooler, WiFi-covered campus, entertainment room with games, guest room, pure veg hygienic food, 24/7 security guard, CCTV camera surveillance, lift facility, 24/7 power backup, and pick & drop facility."
+          text: "Jain's boys Stay Hostel offers fully air-cooled campus, AC rooms, gym, yoga room, RO water cooler, WiFi-covered campus, entertainment room with games, guest room, pure veg hygienic food, 24/7 security guard, CCTV camera surveillance, lift facility, 24/7 power backup, and pick & drop facility."
         }
       }
     ]

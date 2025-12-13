@@ -28,7 +28,7 @@ export default function ContactPage() {
 ${formData.message}
 
 ---
-Sent from Jain's Boy's Stay Contact Form`;
+Sent from Jain's boys Stay Hostel Contact Form`;
 
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
@@ -62,7 +62,7 @@ Sent from Jain's Boy's Stay Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
           >
-            Contact Boy's Stay hostel
+            Contact boys Stay Hostel hostel
           </motion.h1>
           <motion.p
             className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
@@ -70,7 +70,7 @@ Sent from Jain's Boy's Stay Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Contact Jain's Boy's Stay - the best luxury boys hostel in Bhopal, MP Nagar. Book your stay, inquire about AC rooms, or get directions to our hostel near Navoday Hospital. We respond within 24 hours.
+            Contact Jain's boys Stay Hostel - the best luxury boys hostel in Bhopal, MP Nagar. Book your stay, inquire about AC rooms, or get directions to our hostel near Navoday Hospital. We respond within 24 hours.
           </motion.p>
         </motion.div>
 
@@ -572,7 +572,7 @@ Sent from Jain's Boy's Stay Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.5 }}
           >
-            Secure your spot at Jain's Boy's Stay - luxury boys hostel in Bhopal with AC rooms, gym, yoga room, and 24/7 security. Contact us today for booking.
+            Secure your spot at Jain's boys Stay Hostel - luxury boys hostel in Bhopal with AC rooms, gym, yoga room, and 24/7 security. Contact us today for booking.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

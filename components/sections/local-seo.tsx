@@ -15,7 +15,7 @@ export function LocalSeoSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-black">
-            Why Choose Jain's Boy's Stay - Best Hostel in Bhopal MP Nagar?
+            Why Choose Jain's boys Stay Hostel - Best Hostel in Bhopal MP Nagar?
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
             Experience the <strong>best hostel in Bhopal</strong> with premium facilities, secure accommodation, and affordable rates in the heart of <strong>MP Nagar</strong>.
@@ -34,7 +34,7 @@ export function LocalSeoSection() {
               Best Hostel in Bhopal - MP Nagar Location
             </h3>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Jain's Boy's Stay is strategically located in <strong>MP Nagar, Bhopal</strong>, making it the <strong>best hostel in Bhopal</strong> for students and working professionals. Our prime location offers easy access to:
+              Jain's boys Stay Hostel is strategically located in <strong>MP Nagar, Bhopal</strong>, making it the <strong>best hostel in Bhopal</strong> for students and working professionals. Our prime location offers easy access to:
             </p>
             <ul className="space-y-2 text-gray-600">
               <li className="flex items-start gap-2">
@@ -126,7 +126,7 @@ export function LocalSeoSection() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-lg text-gray-700 mb-4">
-            Looking for an <strong>affordable boys hostel MP Nagar</strong>? Jain's Boy's Stay offers the best value with premium facilities at competitive rates.
+            Looking for an <strong>affordable boys hostel MP Nagar</strong>? Jain's boys Stay Hostel offers the best value with premium facilities at competitive rates.
           </p>
           <p className="text-base text-gray-600">
             As the <strong>top hostel near MP Nagar Bhopal</strong>, we ensure your comfort, safety, and convenience. Book your stay at the <strong>best hostel in Bhopal</strong> today!

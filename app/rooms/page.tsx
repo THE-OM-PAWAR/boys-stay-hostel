@@ -172,7 +172,7 @@ export default function RoomsPage() {
                     {room.image ? (
                       <Image
                         src={room.image}
-                        alt={`${room.name} - Jain's Boy's Stay Bhopal MP Nagar`}
+                        alt={`${room.name} - Jain's boys Stay Hostel Bhopal MP Nagar`}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -257,7 +257,7 @@ export default function RoomsPage() {
                       >
                         <a
                           href={`https://wa.me/919826080999?text=${encodeURIComponent(
-                            `Hi, I would like to book the following room at Jain's Boy's Stay:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\n\nPlease provide details about the booking process.`
+                            `Hi, I would like to book the following room at Jain's boys Stay Hostel:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\n\nPlease provide details about the booking process.`
                           )}`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -300,7 +300,7 @@ export default function RoomsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.1, duration: 0.6 }}
             >
-              Secure your spot at Jain's Boy's Stay - luxury boys hostel in Bhopal MP Nagar with AC rooms and modern facilities.
+              Secure your spot at Jain's boys Stay Hostel - luxury boys hostel in Bhopal MP Nagar with AC rooms and modern facilities.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
