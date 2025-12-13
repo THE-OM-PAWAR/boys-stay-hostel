@@ -12,13 +12,10 @@ export function Footer() {
     { href: '/gallery', label: 'Gallery' },
     { href: '/#amenities', label: 'Amenities' },
     { href: '/#places-nearby', label: 'Places Nearby' },
+    { href: '/contact', label: 'Contact Us' },
   ];
 
-  const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-  ];
+
 
   const footerVariants = {
     hidden: { opacity: 0 },
@@ -106,34 +103,7 @@ export function Footer() {
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6 max-w-sm">
               Best hostel in Bhopal, MP Nagar. Luxury boys hostel with secure accommodation, affordable rates, AC rooms, and mess facility. Your home away from home.
             </p>
-            {/* Social Icons */}
-            <div className="flex gap-3">
-              {socialLinks.map((social, index) => {
-                const Icon = social.icon;
-                return (
-                  <motion.a
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center hover:border-yellow/50 hover:bg-yellow/5 transition-all duration-300 group relative overflow-hidden"
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Icon className="w-4 h-4 text-gray-600 group-hover:text-yellow transition-colors relative z-10" />
-                    <motion.div
-                      className="absolute inset-0 bg-yellow/10"
-                      initial={{ scale: 0 }}
-                      whileHover={{ scale: 1 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  </motion.a>
-                );
-              })}
-            </div>
+
           </motion.div>
 
           {/* Quick Links */}
