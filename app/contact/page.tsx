@@ -28,7 +28,7 @@ export default function ContactPage() {
 ${formData.message}
 
 ---
-Sent from Boys Stay Hostel Contact Form`;
+Sent from Jain's Boy's Stay Contact Form`;
 
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
@@ -62,7 +62,7 @@ Sent from Boys Stay Hostel Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
           >
-            Get in Touch
+            Contact Boy's Stay hostel
           </motion.h1>
           <motion.p
             className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
@@ -70,8 +70,7 @@ Sent from Boys Stay Hostel Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Have questions? We'd love to hear from you. Send us a message and
-            we'll respond as soon as possible.
+            Contact Jain's Boy's Stay - the best luxury boys hostel in Bhopal, MP Nagar. Book your stay, inquire about AC rooms, or get directions to our hostel near Navoday Hospital. We respond within 24 hours.
           </motion.p>
         </motion.div>
 
@@ -111,12 +110,12 @@ Sent from Boys Stay Hostel Contact Form`;
               />
               <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                    <label className="block text-sm font-medium mb-2">
                     Your Name
                   </label>
                   <Input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder="Enter your name"
                     value={formData.name}
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
@@ -127,12 +126,12 @@ Sent from Boys Stay Hostel Contact Form`;
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                    <label className="block text-sm font-medium mb-2">
                     Email Address
                   </label>
                   <Input
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="your.email@example.com"
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -143,11 +142,11 @@ Sent from Boys Stay Hostel Contact Form`;
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                    <label className="block text-sm font-medium mb-2">
                     Message
                   </label>
                   <Textarea
-                    placeholder="Tell us how we can help..."
+                    placeholder="Inquire about rooms, booking, or facilities at our hostel in Bhopal..."
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
@@ -265,13 +264,13 @@ Sent from Boys Stay Hostel Contact Form`;
                     </motion.div>
                   </motion.div>
                   <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-black transition-colors">
-                    Email Us
+                    Email Best Hostel in Bhopal
                   </h3>
                   <a
-                    href="mailto:hello@Boys Stayhostel.com"
+                    href="mailto:modi_investmentpoint@yahoo.com"
                     className="text-sm text-gray-700 hover:text-yellow transition-colors duration-300 font-medium block"
                   >
-                    hello@Boys Stayhostel.com
+                    modi_investmentpoint@yahoo.com
                   </a>
                   <div className="mt-3 pt-3 border-t border-gray-100">
                     <motion.div
@@ -384,14 +383,34 @@ Sent from Boys Stay Hostel Contact Form`;
                     </motion.div>
                   </motion.div>
                   <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-black transition-colors">
-                    Call Us
+                    Call Boys Hostel in MP Nagar Bhopal
                   </h3>
-                  <a
-                    href="tel:+15551234567"
-                    className="text-sm text-gray-700 hover:text-yellow transition-colors duration-300 font-medium block"
-                  >
-                    +1 (555) 123-4567
-                  </a>
+                  <div className="space-y-2">
+                    <a
+                      href="tel:+919826080999"
+                      className="text-sm text-gray-700 hover:text-yellow transition-colors duration-300 font-medium block"
+                    >
+                      +91 98260 80999
+                    </a>
+                    <a
+                      href="tel:+917554439132"
+                      className="text-sm text-gray-700 hover:text-yellow transition-colors duration-300 font-medium block"
+                    >
+                      +91 755 443 9132
+                    </a>
+                    <a
+                      href="tel:+919893016180"
+                      className="text-sm text-gray-700 hover:text-yellow transition-colors duration-300 font-medium block"
+                    >
+                      +91 98930 16180
+                    </a>
+                    <a
+                      href="tel:+917553531925"
+                      className="text-sm text-gray-700 hover:text-yellow transition-colors duration-300 font-medium block"
+                    >
+                      +91 755 353 1925
+                    </a>
+                  </div>
                   <div className="mt-3 pt-3 border-t border-gray-100">
                     <motion.div
                       className="flex items-center gap-2 text-xs text-gray-500"
@@ -405,7 +424,7 @@ Sent from Boys Stay Hostel Contact Form`;
                       }}
                     >
                       <Clock className="w-3.5 h-3.5" />
-                      <span>Mon-Sun, 9AM - 8PM EST</span>
+                      <span>Mon-Sun, 9AM - 8PM IST</span>
                     </motion.div>
                   </div>
                 </div>
@@ -503,12 +522,13 @@ Sent from Boys Stay Hostel Contact Form`;
                     </motion.div>
                   </motion.div>
                   <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-black transition-colors">
-                    Visit Us
+                    Visit Boys Hostel Near Navoday Hospital MP Nagar
                   </h3>
-                  <div className="text-sm text-gray-700 space-y-0.5 font-medium">
-                    <p>123 Travel Street</p>
-                    <p>Downtown District</p>
-                    <p>City, State 12345</p>
+                  <div className="text-sm text-gray-700 space-y-0.5 font-medium" itemScope itemType="https://schema.org/PostalAddress">
+                    <p itemProp="streetAddress">Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar</p>
+                    <p itemProp="addressLocality">Bhopal</p>
+                    <p itemProp="addressRegion">Madhya Pradesh <span itemProp="postalCode">462011</span></p>
+                    <p itemProp="addressCountry">India</p>
                   </div>
                   <div className="mt-3 pt-3 border-t border-gray-100">
                     <motion.div
@@ -544,7 +564,7 @@ Sent from Boys Stay Hostel Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
-            Ready to book?
+            Book Your Stay at Best Hostel in Bhopal MP Nagar
           </motion.h2>
           <motion.p
             className="text-gray-600 mb-8 text-lg"
@@ -552,7 +572,7 @@ Sent from Boys Stay Hostel Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.5 }}
           >
-            Don't wait! Secure your spot at Boys Stay Hostel today.
+            Secure your spot at Jain's Boy's Stay - luxury boys hostel in Bhopal with AC rooms, gym, yoga room, and 24/7 security. Contact us today for booking.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

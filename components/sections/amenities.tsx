@@ -16,6 +16,13 @@ import {
   UtensilsCrossed,
   Fan,
   ArrowRight,
+  Droplets,
+  Zap,
+  Shield,
+  Car,
+  Gamepad2,
+  BedDouble,
+  Users,
 } from 'lucide-react';
 import {
   Carousel,
@@ -30,20 +37,20 @@ import { useEffect, useState } from 'react';
 
 export function AmenitiesSection() {
   const amenities = [
-    { icon: Wifi, name: 'Free WiFi', description: 'High-speed internet' },
-    { icon: UtensilsCrossed, name: 'Meals Provided', description: 'Delicious & nutritious' },
-    { icon: Utensils, name: 'Kitchen', description: 'Fully equipped' },
-    { icon: Dumbbell, name: 'Gym Access', description: 'Stay active' },
-    { icon: Laptop, name: 'Workspace', description: 'Co-working area' },
-    { icon: Music, name: 'Common Room', description: 'Socialize & relax' },
-    { icon: Tv, name: 'Entertainment', description: 'Movies & games' },
-    {
-      icon: WashingMachine,
-      name: 'Laundry',
-      description: 'Washing facilities',
-    },
-    { icon: UtensilsCrossed, name: 'Dining Area', description: 'Shared meals' },
-    { icon: Fan, name: 'AC Rooms', description: 'Air-conditioned rooms' },
+    { icon: Fan, name: 'Fully Air-Cooled Campus', description: 'Complete climate control' },
+    { icon: Fan, name: 'AC Rooms', description: 'Air-conditioned comfortable rooms' },
+    { icon: Zap, name: '24/7 Power Backup', description: 'Uninterrupted power supply' },
+    { icon: Dumbbell, name: 'Gym', description: 'Fitness & wellness center' },
+    { icon: Users, name: 'Yoga Room', description: 'Peaceful yoga sessions' },
+    { icon: Droplets, name: 'RO Water Cooler', description: 'Pure filtered water' },
+    { icon: Wifi, name: 'WiFi-Covered Campus', description: 'High-speed internet everywhere' },
+    { icon: Gamepad2, name: 'Entertainment Room', description: 'Games & recreation' },
+    { icon: BedDouble, name: 'Guest Room', description: 'Dedicated guest accommodation' },
+    { icon: UtensilsCrossed, name: 'Pure Veg Food', description: 'Hygienic vegetarian meals' },
+    { icon: Shield, name: '24/7 Security Guard', description: 'Round-the-clock protection' },
+    { icon: Shield, name: 'CCTV Surveillance', description: 'Complete security monitoring' },
+    { icon: ArrowRight, name: 'Lift Facility', description: 'Easy floor access' },
+    { icon: Car, name: 'Pick & Drop Facility', description: 'Convenient transportation' },
   ];
 
   const [api, setApi] = useState<CarouselApi>();

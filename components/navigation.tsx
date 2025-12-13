@@ -82,7 +82,7 @@ export function Navigation() {
               >
                 <Image
                   src="/logo.svg"
-                  alt="Boys Stay Hostel"
+                  alt="Jain's Boy's Stay - A Luxury Boys Hostel"
                   width={291}
                   height={99}
                   className="h-full w-auto object-contain mix-blend-hard-light"

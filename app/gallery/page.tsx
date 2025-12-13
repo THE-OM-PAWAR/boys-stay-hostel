@@ -17,7 +17,7 @@ const galleryImages: GalleryImage[] = [
   
   {
     id: '2',
-    title: 'Modern Room Interior',
+    title: 'AC Room Bhopal',
     category: 'interior',
     imageUrl: '/images/room3.jpeg',
     aspectRatio: 'portrait',
@@ -31,28 +31,28 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: '2.2',
-    title: 'Modern Room Interior',
+    title: 'Luxury AC Room',
     category: 'interior',
     imageUrl: '/images/galleryroom9.jpeg',
     aspectRatio: 'portrait',
   },
   {
     id: '2.3',
-    title: 'Modern Room Interior',
+    title: 'Double Sharing Room',
     category: 'interior',
     imageUrl: '/images/galleryroom3.jpeg',
     aspectRatio: 'portrait',
   },
   {
     id: '2.4',
-    title: 'Modern Room Interior',
+    title: 'Triple Sharing Room',
     category: 'interior',
     imageUrl: '/images/galleryroom4.jpeg',
     aspectRatio: 'portrait',
   },
   {
     id: '2.5',
-    title: 'Modern Room Interior',
+    title: 'Air Cooled Room',
     category: 'interior',
     imageUrl: '/images/galleryroom5.jpeg',
     aspectRatio: 'portrait',
@@ -66,49 +66,49 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: '2.7',
-    title: 'Modern Room Interior',
+    title: 'Comfortable Room',
     category: 'interior',
     imageUrl: '/images/galleryroom7.jpeg',
     aspectRatio: 'portrait',
   },
   {
     id: '2.8',
-    title: 'Modern Room Interior',
+    title: 'Spacious Room',
     category: 'interior',
     imageUrl: '/images/galleryroom8.jpeg',
     aspectRatio: 'portrait',
   },
   {
     id: '2.9',
-    title: 'Modern Room Interior',
+    title: 'Hostel Room Interior',
     category: 'interior',
     imageUrl: '/images/interior1.jpeg',
     aspectRatio: 'portrait',
   },
   {
     id: '2.10',
-    title: 'Modern Room Interior',
+    title: 'Boys Hostel Room',
     category: 'interior',
     imageUrl: '/images/interior2.jpeg',
     aspectRatio: 'portrait',
   },
   {
     id: '2.11',
-    title: 'Modern Room Interior',
+    title: 'Room Facilities',
     category: 'interior',
     imageUrl: '/images/interior3.jpeg',
     aspectRatio: 'portrait',
   },
   {
     id: '2.12',
-    title: 'Modern Room Interior',
+    title: 'Room Amenities',
     category: 'interior',
     imageUrl: '/images/interior4.jpeg',
     aspectRatio: 'portrait',
   },
   {
     id: '2.13',
-    title: 'Modern Room Interior',
+    title: 'Hostel Accommodation',
     category: 'interior',
     imageUrl: '/images/interior5.jpeg',
     aspectRatio: 'portrait',
@@ -119,28 +119,28 @@ const galleryImages: GalleryImage[] = [
   
   {
     id: '3',
-    title: 'Rooftop Terrace',
+    title: 'Hostel Building Exterior',
     category: 'exterior',
     imageUrl: '/images/boysstay.jpeg',
     aspectRatio: 'landscape',
   },
   {
     id: '3.1',
-    title: 'Rooftop Terrace',
+    title: 'Boys Hostel Bhopal',
     category: 'exterior',
     imageUrl: '/images/exterior1.jpeg',
     aspectRatio: 'landscape',
   },
   {
     id: '3.2',
-    title: 'Rooftop Terrace',
+    title: 'Hostel MP Nagar',
     category: 'exterior',
     imageUrl: '/images/exterior2.jpeg',
     aspectRatio: 'landscape',
   },
   {
     id: '3.3',
-    title: 'Rooftop Terrace',
+    title: 'Hostel Facility',
     category: 'exterior',
     imageUrl: '/images/exterior3.jpeg',
     aspectRatio: 'landscape',
@@ -149,21 +149,21 @@ const galleryImages: GalleryImage[] = [
   //mess images
   {
     id: '4',
-    title: 'Shared Kitchen',
+    title: 'Mess Facility Bhopal',
     category: 'mess',
     imageUrl: '/images/mess2.jpeg',
     aspectRatio: 'square',
   },
   {
     id: '4.1',
-    title: 'Shared Kitchen',
+    title: 'Pure Veg Mess',
     category: 'mess',
     imageUrl: '/images/mess1.jpeg',
     aspectRatio: 'square',
   },
   {
     id: '4.2',
-    title: 'Shared Kitchen',
+    title: 'Dining Area',
     category: 'mess',
     imageUrl: '/images/gallerymess2.jpeg',
     aspectRatio: 'square',
@@ -172,91 +172,91 @@ const galleryImages: GalleryImage[] = [
   //others
     {
       id: '5',
-      title: 'Social Events Space',
+      title: 'Entertainment Room',
       category: 'others',
       imageUrl: '/images/other1.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.1',
-      title: 'Social Events Space',
+      title: 'Gym Facility',
       category: 'others',
       imageUrl: '/images/other2.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.2',
-      title: 'Social Events Space',
+      title: 'Yoga Room',
       category: 'others',
       imageUrl: '/images/other3.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.3',
-      title: 'Social Events Space',
+      title: 'Common Area',
       category: 'others',
       imageUrl: '/images/other4.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.4',
-      title: 'Social Events Space',
+      title: 'Guest Room',
       category: 'others',
       imageUrl: '/images/other5.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.5',
-      title: 'Social Events Space',
+      title: 'Lift Facility',
       category: 'others',
       imageUrl: '/images/other6.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.6',
-      title: 'Social Events Space',
+      title: 'Hostel Lobby',
       category: 'others',
       imageUrl: '/images/other7.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.7',
-      title: 'Social Events Space',
+      title: 'Recreation Area',
       category: 'others',
       imageUrl: '/images/other8.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.8',
-      title: 'Social Events Space',
+      title: 'Hostel Amenities',
       category: 'others',
       imageUrl: '/images/other9.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.9',
-      title: 'Social Events Space',
+      title: 'Facilities Bhopal',
       category: 'others',
       imageUrl: '/images/other10.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.10',
-      title: 'Social Events Space',
+      title: 'Hostel Infrastructure',
       category: 'others',
       imageUrl: '/images/other11.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.11',
-      title: 'Social Events Space',
+      title: 'Modern Facilities',
       category: 'others',
       imageUrl: '/images/other12.jpeg',
       aspectRatio: 'portrait',
     },
     {
       id: '5.12',
-      title: 'Social Events Space',
+      title: 'Hostel Features',
       category: 'others',
       imageUrl: '/images/other13.jpeg',
       aspectRatio: 'portrait',
@@ -349,8 +349,8 @@ export default function GalleryPage() {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-3 sm:mb-4 md:mb-5 leading-[1.1] text-black px-2 sm:px-0 tracking-tight"
               variants={titleVariants}
             >
-              <span className="block">Photo Gallery</span>
-              <span className="block font-normal">Collection</span>
+              <span className="block">Best Hostel Gallery</span>
+              <span className="block font-normal">Bhopal MP Nagar</span>
             </motion.h1>
 
             <motion.div
@@ -366,9 +366,9 @@ export default function GalleryPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.7 }}
             >
-              Take a peek at our spaces. See where you'll stay, relax, and connect
+              View photos of <strong>AC rooms, gym, yoga room, entertainment room, and mess facility</strong> at the <strong>best boys hostel in Bhopal MP Nagar</strong>.
               <br className="hidden sm:block" />
-              <span className="text-gray-400"> with fellow travelers.</span>
+              <span className="text-gray-400"> See why we're the <strong>top hostel near MP Nagar</strong>.</span>
             </motion.p>
           </motion.div>
         </div>
@@ -424,7 +424,7 @@ export default function GalleryPage() {
                 <div className={`relative ${getAspectRatioClass()} overflow-hidden rounded-xl bg-gray-100`}>
                   <Image
                     src={image.imageUrl}
-                    alt={image.title}
+                    alt={`${image.title} - Jain's Boy's Stay Bhopal MP Nagar`}
                     fill
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -487,7 +487,7 @@ export default function GalleryPage() {
             <div className="relative w-full h-[80vh] rounded-lg overflow-hidden">
               <Image
                 src={selectedImage.imageUrl}
-                alt={selectedImage.title}
+                alt={`${selectedImage.title} - Jain's Boy's Stay Bhopal MP Nagar`}
                 fill
                 className="object-contain"
                 unoptimized

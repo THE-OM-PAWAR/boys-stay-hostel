@@ -22,52 +22,52 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: '1',
-    title: 'Modern Rooms',
+    title: 'AC Room Bhopal',
     imageUrl: '/images/room3.jpeg',
   },
   {
     id: '2',
-    title: 'Mess area',
+    title: 'Mess Facility',
     imageUrl: '/images/mess2.jpeg',
   },
   {
     id: '3',
-    title: 'Rooftop Terrace',
+    title: 'Hostel Office',
     imageUrl: '/images/office.jpeg',
   },
   {
     id: '4',
-    title: 'City Views',
+    title: 'Lift Facility',
     imageUrl: '/images/lift.jpeg',
   },
   {
     id: '5',
-    title: 'Social Events',
+    title: 'AC Room MP Nagar',
     imageUrl: '/images/galleryroom2.jpeg',
   },
   {
     id: '6',
-    title: 'Interior View',
+    title: 'Room Interior',
     imageUrl: '/images/interior1.jpeg',
   },
   {
     id: '7',
-    title: 'Interior View',
+    title: 'Hostel Interior',
     imageUrl: '/images/interior2.jpeg',
   },
   {
     id: '8',
-    title: 'Exterior View',
+    title: 'Building Exterior',
     imageUrl: '/images/exterior1.jpeg',
   },
   {
     id: '9',
-    title: 'Mess Area',
+    title: 'Dining Area',
     imageUrl: '/images/mess1.jpeg',
   },
   {
     id: '10',
-    title: 'Other',
+    title: 'Entertainment Room',
     imageUrl: '/images/other1.jpeg',
   },
   
@@ -96,7 +96,7 @@ export function GallerySection() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <span className="bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">
-              Gallery
+              Hostel Gallery Bhopal
             </span>
             {/* Underline accent */}
             <motion.div
@@ -116,7 +116,7 @@ export function GallerySection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Take a peek at our spaces. See where you'll stay, relax, and connect with fellow travelers.
+            View photos of AC rooms, gym, yoga room, and mess facility at the best boys hostel in Bhopal MP Nagar.
           </motion.p>
         </motion.div>
 
@@ -145,7 +145,7 @@ export function GallerySection() {
                     <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-100">
                       <Image
                         src={item.imageUrl}
-                        alt={item.title}
+                        alt={`${item.title} - Boys Hostel Bhopal MP Nagar`}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                         sizes="(max-width: 640px) 280px, 320px"

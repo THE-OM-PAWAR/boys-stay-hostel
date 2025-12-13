@@ -95,7 +95,7 @@ export function Footer() {
               >
                 <Image
                   src="/logo mini.svg"
-                  alt="Boys Stay Hostel"
+                  alt="Jain's Boy's Stay - A Luxury Boys Hostel"
                   width={441}
                   height={179}
                   className="h-full w-auto object-contain mix-blend-hard-light"
@@ -104,8 +104,7 @@ export function Footer() {
               </motion.div>
             </Link>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6 max-w-sm">
-              Your home away from home. Experience comfort, community, and
-              unforgettable memories.
+              Best hostel in Bhopal, MP Nagar. Luxury boys hostel with secure accommodation, affordable rates, AC rooms, and mess facility. Your home away from home.
             </p>
             {/* Social Icons */}
             <div className="flex gap-3">
@@ -185,10 +184,11 @@ export function Footer() {
                 transition={{ duration: 0.3, delay: 0.6 }}
               >
                 <MapPin className="w-4 h-4 text-yellow mt-0.5 flex-shrink-0" />
-                <div>
-                  <p>123 Travel Street</p>
-                  <p>Downtown District</p>
-                  <p>City, State 12345</p>
+                <div itemScope itemType="https://schema.org/PostalAddress">
+                  <p itemProp="streetAddress">Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar</p>
+                  <p itemProp="addressLocality">Bhopal</p>
+                  <p itemProp="addressRegion">Madhya Pradesh <span itemProp="postalCode">462011</span></p>
+                  <p itemProp="addressCountry">India</p>
                 </div>
               </motion.li>
               <motion.li
@@ -199,11 +199,11 @@ export function Footer() {
                 transition={{ duration: 0.3, delay: 0.7 }}
               >
                 <a
-                  href="mailto:hello@Boys Stayhostel.com"
+                  href="mailto:modi_investmentpoint@yahoo.com"
                   className="flex items-center gap-2 hover:text-black transition-colors group"
                 >
                   <Mail className="w-4 h-4 text-yellow group-hover:scale-110 transition-transform" />
-                  <span>hello@Boys Stayhostel.com</span>
+                  <span>modi_investmentpoint@yahoo.com</span>
                 </a>
               </motion.li>
               <motion.li
@@ -212,13 +212,36 @@ export function Footer() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.8 }}
               >
-                <a
-                  href="tel:+15551234567"
-                  className="flex items-center gap-2 hover:text-black transition-colors group"
-                >
-                  <Phone className="w-4 h-4 text-yellow group-hover:scale-110 transition-transform" />
-                  <span>+91 98260 80999</span>
-                </a>
+                <div className="space-y-2">
+                  <a
+                    href="tel:+919826080999"
+                    className="flex items-center gap-2 hover:text-black transition-colors group"
+                  >
+                    <Phone className="w-4 h-4 text-yellow group-hover:scale-110 transition-transform" />
+                    <span>+91 98260 80999</span>
+                  </a>
+                  <a
+                    href="tel:+917554439132"
+                    className="flex items-center gap-2 hover:text-black transition-colors group"
+                  >
+                    <Phone className="w-4 h-4 text-yellow group-hover:scale-110 transition-transform" />
+                    <span>+91 755 443 9132</span>
+                  </a>
+                  <a
+                    href="tel:+919893016180"
+                    className="flex items-center gap-2 hover:text-black transition-colors group"
+                  >
+                    <Phone className="w-4 h-4 text-yellow group-hover:scale-110 transition-transform" />
+                    <span>+91 98930 16180</span>
+                  </a>
+                  <a
+                    href="tel:+917553531925"
+                    className="flex items-center gap-2 hover:text-black transition-colors group"
+                  >
+                    <Phone className="w-4 h-4 text-yellow group-hover:scale-110 transition-transform" />
+                    <span>+91 755 353 1925</span>
+                  </a>
+                </div>
               </motion.li>
             </ul>
           </motion.div>
@@ -233,7 +256,7 @@ export function Footer() {
           transition={{ duration: 0.5, delay: 0.9 }}
         >
           <p className="text-sm text-gray-600">
-            © {new Date().getFullYear()} Boys Stay Hostel. All rights reserved.
+            © {new Date().getFullYear()} Jain's Boy's Stay. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 sm:gap-6 text-sm text-gray-600 justify-center">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item, index) => (

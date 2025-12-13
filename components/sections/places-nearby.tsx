@@ -96,7 +96,7 @@ export function PlacesNearbySection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Discover the best spots around our hostel
+            Discover the best spots around our <strong>boys hostel in MP Nagar Bhopal</strong>. Conveniently located near major landmarks and transportation hubs.
           </motion.p>
         </motion.div>
 
