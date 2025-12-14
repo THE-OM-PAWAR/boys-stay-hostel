@@ -6,9 +6,9 @@ export function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${siteUrl}#organization`,
-    name: "Jain's boys Stay",
-    alternateName: "Jain's boys Stay - A Luxury Boys Hostel",
-    description: "Best luxury boys hostel in Bhopal, MP Nagar. Jain's boys Stay offers fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, and pick & drop facility.",
+    name: "Jain boys Stay",
+    alternateName: "Boys Hostel Bhopal - Jain boys Stay hostel",
+    description: "Boys Hostel Bhopal - Jain boys Stay hostel. Best luxury boys hostel in Bhopal, MP Nagar. Jain boys Stay offers fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, and pick & drop facility.",
     url: siteUrl,
     logo: `${siteUrl}/logo.svg`,
     image: [
@@ -135,8 +135,8 @@ export function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'LodgingBusiness',
     '@id': `${siteUrl}#lodging`,
-    name: "Jain's boys Stay",
-    description: "Best luxury boys hostel in Bhopal, MP Nagar. Jain's boys Stay offers fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, and pick & drop facility.",
+    name: "Jain boys Stay",
+    description: "Boys Hostel Bhopal - Jain boys Stay hostel. Best luxury boys hostel in Bhopal, MP Nagar. Jain boys Stay offers fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, and pick & drop facility.",
     url: siteUrl,
     image: [
       `${siteUrl}/hero.png`,
@@ -277,33 +277,129 @@ export function StructuredData() {
     ]
   };
 
-  // FAQ Schema (can be expanded)
+  // FAQ Schema (expanded with more basic FAQs)
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What is the best hostel in Bhopal?',
+        name: 'Boys hostel Bhopal?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "Jain's boys Stay is one of the best luxury hostels in Bhopal, located in MP Nagar. We offer fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, CCTV surveillance, lift facility, power backup, and pick & drop facility."
+          text: "Jain boys Stay Hostel is a leading boys hostel in Bhopal, offering top-notch facilities and a comfortable stay experience for students and working professionals in MP Nagar."
         }
       },
       {
         '@type': 'Question',
-        name: "Where is Jain's boys Stay located?",
+        name: 'What is the best boys hostel in Bhopal?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "Jain's boys Stay is located at Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar, Bhopal - 462011. We are conveniently located near Rani Kamlapati Station, ISBT Bus Stand, and DB City Mall."
+          text: "Jain boys Stay hostel is the best boys hostel in Bhopal, located in MP Nagar. We offer fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg hygienic food, 24/7 security, CCTV surveillance, lift facility, power backup, and pick & drop facility."
         }
       },
       {
         '@type': 'Question',
-        name: "What amenities are available at Jain's boys Stay?",
+        name: "Where is Jain boys Stay hostel located?",
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "Jain's boys Stay offers fully air-cooled campus, AC rooms, gym, yoga room, RO water cooler, WiFi-covered campus, entertainment room with games, guest room, pure veg hygienic food, 24/7 security guard, CCTV camera surveillance, lift facility, 24/7 power backup, and pick & drop facility."
+          text: "Jain boys Stay hostel is located at Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar, Bhopal - 462011. We are conveniently located near Rani Kamlapati Station, ISBT Bus Stand, and DB City Mall."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "What amenities are available at Jain boys Stay hostel?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Jain boys Stay hostel offers fully air-cooled campus, AC rooms, gym, yoga room, RO water cooler, WiFi-covered campus, entertainment room with games, guest room, pure veg hygienic food, 24/7 security guard, CCTV camera surveillance, lift facility, 24/7 power backup, and pick & drop facility."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "How can I book a room at Jain boys Stay hostel?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "You can book a room by contacting us through our website form, calling us at +91 98260 80999, or visiting our hostel directly. Early booking is recommended to secure your seat."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "Is food included in the hostel fees?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, Jain boys Stay hostel provides pure vegetarian hygienic food as part of the hostel package. The meals are prepared fresh daily."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "Is there a girls hostel near MP Nagar Bhopal?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, there are girls hostels near MP Nagar. Jain boys Stay hostel specializes in boys hostel accommodations, but we can guide you to good options for girls hostel as well."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "Are the rooms air-conditioned?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, we offer both AC and air-cooled rooms. All our rooms are well-ventilated for maximum comfort."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "Is WiFi available for residents?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, the entire campus is WiFi enabled and all residents have access to high-speed internet."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "Do you offer 24/7 security at the hostel?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, our hostel is secured with 24/7 security guards and CCTV surveillance to ensure safety for all residents."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "Is there a gym and entertainment area in the hostel?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, we provide an on-campus gym, yoga room, and various indoor entertainment facilities and games for residents."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "Can working professionals stay at Jain boys Stay Hostel?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, the hostel is open to students as well as working professionals who need comfortable and secure accommodation in Bhopal."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "Is Jain boys Stay boys hostel near any hospitals or malls?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Yes, our hostel is conveniently located near Navoday Hospital and close to DB City Mall, making it easy to access healthcare and shopping facilities."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "What types of rooms are available at the hostel?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Jain boys Stay hostel offers a variety of rooms including single, double, and triple sharing rooms with options for AC or air-cooled environment."
+        }
+      },
+      {
+        '@type': 'Question',
+        name: "Who can stay at Jain boys Stay hostel?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Boys who are students or working professionals looking for quality accommodation in Bhopal can apply for a seat at Jain boys Stay hostel."
         }
       }
     ]

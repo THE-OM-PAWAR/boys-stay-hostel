@@ -30,7 +30,7 @@ const allRooms: Room[] = [
     id: '1',
     name: 'Double Sharing Room',
     type: 'double sharing',
-    description: 'Comfortable air-conditioned room for two residents at best hostel in Bhopal, equipped with beds, storage, and essential amenities.',
+    description: 'Comfortable air-conditioned room for two residents at best boys hostel Bhopal, equipped with beds, storage, and essential amenities.',
     capacity: '2 beds',
     features: ['Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
     image: '/images/galleryroom8.jpeg',
@@ -39,7 +39,7 @@ const allRooms: Room[] = [
     id: '2',
     name: 'Triple Sharing Room',
     type: 'triple sharing',
-    description: 'Spacious room for three residents at boys hostel MP Nagar, equipped with comfortable beds, storage, and essential amenities.',
+    description: 'Spacious room for three residents at boys hostel Bhopal MP Nagar, equipped with comfortable beds, storage, and essential amenities.',
     capacity: '3 beds',
     features: ['Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
     image: '/images/galleryroom9.jpeg',
@@ -48,7 +48,7 @@ const allRooms: Room[] = [
     id: '3',
     name: 'Double Sharing AC Room',
     type: 'double sharing',
-    description: 'Air-conditioned room for two residents at luxury hostel Bhopal, with individual beds, storage, and modern amenities.',
+    description: 'Air-conditioned room for two residents at luxury boys hostel Bhopal, with individual beds, storage, and modern amenities.',
     capacity: '2 beds',
     features: ['AC', 'Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
     image: '/images/galleryroom2.jpeg',
@@ -57,7 +57,7 @@ const allRooms: Room[] = [
     id: '4',
     name: 'Triple Sharing AC Room',
     type: 'triple sharing',
-    description: 'Spacious air-conditioned room for three residents at secure hostel MP Nagar, equipped with beds, storage, and amenities.',
+    description: 'Spacious air-conditioned room for three residents at secure boys hostel Bhopal MP Nagar, equipped with beds, storage, and amenities.',
     capacity: '3 beds',
     features: ['AC', 'Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
     image: '/images/room101.png',
@@ -117,7 +117,7 @@ export function RoomsSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <span className="bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">
-              AC Rooms Bhopal
+              AC Rooms at Boys Hostel Bhopal
             </span>
             {/* Underline accent */}
             <motion.div
@@ -137,7 +137,7 @@ export function RoomsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Book double sharing and triple sharing AC rooms at the best boys hostel in MP Nagar Bhopal.
+            Book double sharing and triple sharing AC rooms at the best boys hostel Bhopal in MP Nagar.
           </motion.p>
 
 
@@ -199,7 +199,7 @@ export function RoomsSection() {
                           <>
                             <Image
                               src={room.image}
-                              alt={`${room.name} - Boys Hostel Bhopal MP Nagar`}
+                              alt={`${room.name} - Boys Hostel Bhopal - Best Hostel in MP Nagar`}
                               fill
                               className="object-cover group-hover:scale-110 transition-transform duration-700"
                               sizes="(max-width: 640px) 280px, 300px"
@@ -249,7 +249,7 @@ export function RoomsSection() {
 
                         <a
                           href={`https://wa.me/919826080999?text=${encodeURIComponent(
-                            `Hi, I would like to enquire about the room at Jain's boys Stay:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\nDescription: ${room.description}\n\nPlease provide more details about the availability and booking process.`
+                            `Hi, I would like to enquire about the room at Jain boys Stay:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\nDescription: ${room.description}\n\nPlease provide more details about the availability and booking process.`
                           )}`}
                           target="_blank"
                           rel="noopener noreferrer"

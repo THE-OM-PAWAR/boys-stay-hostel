@@ -33,7 +33,7 @@ export function GirlsHostelSection() {
             <div className="relative h-48 sm:h-56 md:h-full w-full rounded-2xl md:rounded-none overflow-hidden mt-6 sm:mt-8 md:mt-0">
               <Image
                 src="/images/girlsstay.jpeg"
-                alt="Jain's Girl's Stay Hostel"
+                alt="Jain Girl's Stay Hostel"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -78,7 +78,7 @@ export function GirlsHostelSection() {
             >
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4 md:w-5 md:h-5 text-purple-600" />
-                <span className="text-sm sm:text-base md:text-lg font-semibold text-purple-900">Jain's Girls Stay</span>
+                <span className="text-sm sm:text-base md:text-lg font-semibold text-purple-900">Jain Girls Stay</span>
               </div>
             </motion.div>
 
@@ -118,7 +118,7 @@ export function GirlsHostelSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                Jain's Girl's Stay Hostel
+                Jain Girl's Stay Hostel
               </motion.h2>
 
               <motion.div

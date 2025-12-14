@@ -15,10 +15,10 @@ export function LocalSeoSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-black">
-            Why Choose Jain's Boy's Stay - Best Hostel in Bhopal MP Nagar?
+            Why Choose Boys Hostel Bhopal - Best Hostel in MP Nagar?
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-            Experience the best hostel in Bhopal with premium facilities, secure accommodation, and affordable rates in the heart of MP Nagar.
+            Experience the best boys hostel Bhopal with premium facilities, secure accommodation, and affordable rates in the heart of MP Nagar.
           </p>
         </motion.div>
 
@@ -31,10 +31,10 @@ export function LocalSeoSection() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold mb-4 text-black text-left">
-              Best Hostel in Bhopal - MP Nagar Location
+              Boys Hostel Bhopal - Best Location in MP Nagar
             </h3>
             <p className="text-gray-600 mb-4 leading-relaxed text-left">
-              Jain's Boy's Stay is strategically located in MP Nagar, Bhopal, making it the best hostel in Bhopal for students and working professionals. Our prime location offers easy access to:
+              Jain Boy's Stay is strategically located in MP Nagar, Bhopal, making it the best boys hostel Bhopal for students and working professionals. Our prime location offers easy access to:
             </p>
             <ul className="space-y-2 text-gray-600">
               <li className="flex items-start gap-2">
@@ -90,10 +90,10 @@ export function LocalSeoSection() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-sm text-light text-gray-600 mb-4 text-left">
-            Looking for an affordable boys hostel MP Nagar? Jain's Boy's Stay offers the best value with premium facilities at competitive rates.
+            Looking for an affordable boys hostel Bhopal in MP Nagar? Jain Boy's Stay offers the best value with premium facilities at competitive rates.
           </p>
           <p className="text-sm text-light text-gray-600 text-left">
-            As the top hostel near MP Nagar Bhopal, we ensure your comfort, safety, and convenience. Book your stay at the best hostel in Bhopal today!
+            As the top boys hostel Bhopal near MP Nagar, we ensure your comfort, safety, and convenience. Book your stay at the best boys hostel in Bhopal today!
           </p>
         </motion.div>
       </div>

@@ -28,7 +28,7 @@ export default function ContactPage() {
 ${formData.message}
 
 ---
-Sent from Jain's boys Stay Contact Form`;
+Sent from Jain boys Stay Hostel Contact Form`;
 
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
@@ -62,7 +62,7 @@ Sent from Jain's boys Stay Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
           >
-            Contact boys Stay hostel
+            Contact Boys Hostel Bhopal
           </motion.h1>
           <motion.p
             className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
@@ -70,7 +70,7 @@ Sent from Jain's boys Stay Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Contact Jain's boys Stay - the best luxury boys hostel in Bhopal, MP Nagar. Book your stay, inquire about AC rooms, or get directions to our hostel near Navoday Hospital. We respond within 24 hours.
+            Contact Boys Hostel Bhopal - Jains boys Stay hostel, the best boys hostel in Bhopal, MP Nagar. Book your stay, inquire about AC rooms, or get directions to our boys hostel near Navoday Hospital. We respond within 24 hours.
           </motion.p>
         </motion.div>
 
@@ -264,7 +264,7 @@ Sent from Jain's boys Stay Contact Form`;
                     </motion.div>
                   </motion.div>
                   <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-black transition-colors">
-                    Email Best Hostel in Bhopal
+                    Email Boys Hostel Bhopal
                   </h3>
                   <a
                     href="mailto:modi_investmentpoint@yahoo.com"
@@ -383,7 +383,7 @@ Sent from Jain's boys Stay Contact Form`;
                     </motion.div>
                   </motion.div>
                   <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-black transition-colors">
-                    Call Boys Hostel in MP Nagar Bhopal
+                    Call Boys Hostel Bhopal
                   </h3>
                   <div className="space-y-2">
                     <a
@@ -522,7 +522,7 @@ Sent from Jain's boys Stay Contact Form`;
                     </motion.div>
                   </motion.div>
                   <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-black transition-colors">
-                    Visit Boys Hostel Near Navoday Hospital MP Nagar
+                    Visit Boys Hostel Bhopal Near Navoday Hospital MP Nagar
                   </h3>
                   <div className="text-sm text-gray-700 space-y-0.5 font-medium" itemScope itemType="https://schema.org/PostalAddress">
                     <p itemProp="streetAddress">Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar</p>
@@ -564,7 +564,7 @@ Sent from Jain's boys Stay Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
-            Book Your Stay at Best Hostel in Bhopal MP Nagar
+            Book Your Stay at Boys Hostel Bhopal - Best Hostel in MP Nagar
           </motion.h2>
           <motion.p
             className="text-gray-600 mb-8 text-lg"
@@ -572,7 +572,7 @@ Sent from Jain's boys Stay Contact Form`;
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.5 }}
           >
-            Secure your spot at Jain's boys Stay - luxury boys hostel in Bhopal with AC rooms, gym, yoga room, and 24/7 security. Contact us today for booking.
+            Secure your spot at Boys Hostel Bhopal - Jain boys Stay Hostel, the best boys hostel in Bhopal with AC rooms, gym, yoga room, and 24/7 security. Contact us today for booking.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

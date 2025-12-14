@@ -96,7 +96,7 @@ export function GallerySection() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <span className="bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">
-              Hostel Gallery Bhopal
+              Boys Hostel Bhopal Gallery
             </span>
             {/* Underline accent */}
             <motion.div
@@ -116,7 +116,7 @@ export function GallerySection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            View photos of AC rooms, gym, yoga room, and mess facility at the best boys hostel in Bhopal MP Nagar.
+            View photos of AC rooms, gym, yoga room, and mess facility at the best boys hostel Bhopal in MP Nagar.
           </motion.p>
         </motion.div>
 
@@ -145,7 +145,7 @@ export function GallerySection() {
                     <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-100">
                       <Image
                         src={item.imageUrl}
-                        alt={`${item.title} - Boys Hostel Bhopal MP Nagar`}
+                        alt={`${item.title} - Boys Hostel Bhopal - Best Hostel in MP Nagar`}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                         sizes="(max-width: 640px) 280px, 320px"

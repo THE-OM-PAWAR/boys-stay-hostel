@@ -349,8 +349,8 @@ export default function GalleryPage() {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-3 sm:mb-4 md:mb-5 leading-[1.1] text-black px-2 sm:px-0 tracking-tight"
               variants={titleVariants}
             >
-              <span className="block">Best Hostel Gallery</span>
-              <span className="block font-normal">Bhopal MP Nagar</span>
+              <span className="block">Boys Hostel Bhopal</span>
+              <span className="block font-normal">Photo Gallery MP Nagar</span>
             </motion.h1>
 
             <motion.div
@@ -366,9 +366,9 @@ export default function GalleryPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.7 }}
             >
-              View photos of <strong>AC rooms, gym, yoga room, entertainment room, and mess facility</strong> at the <strong>best boys hostel in Bhopal MP Nagar</strong>.
+              View photos of <strong>AC rooms, gym, yoga room, entertainment room, and mess facility</strong> at the <strong>best boys hostel Bhopal in MP Nagar</strong>.
               <br className="hidden sm:block" />
-              <span className="text-gray-400"> See why we're the <strong>top hostel near MP Nagar</strong>.</span>
+              <span className="text-gray-400"> See why we're the <strong>top boys hostel Bhopal near MP Nagar</strong>.</span>
             </motion.p>
           </motion.div>
         </div>
@@ -424,7 +424,7 @@ export default function GalleryPage() {
                 <div className={`relative ${getAspectRatioClass()} overflow-hidden rounded-xl bg-gray-100`}>
                   <Image
                     src={image.imageUrl}
-                    alt={`${image.title} - Jain's boys Stay Bhopal MP Nagar`}
+                    alt={`${image.title} - Boys Hostel Bhopal - Best Hostel in MP Nagar`}
                     fill
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -487,7 +487,7 @@ export default function GalleryPage() {
             <div className="relative w-full h-[80vh] rounded-lg overflow-hidden">
               <Image
                 src={selectedImage.imageUrl}
-                alt={`${selectedImage.title} - Jain's boys Stay Bhopal MP Nagar`}
+                alt={`${selectedImage.title} - Boys Hostel Bhopal - Best Hostel in MP Nagar`}
                 fill
                 className="object-contain"
                 unoptimized

@@ -22,7 +22,7 @@ const rooms: Room[] = [
     id: '1',
     name: 'Double Sharing Room',
     type: 'double sharing',
-    description: 'Comfortable air-conditioned room for two residents at best hostel in Bhopal, equipped with beds, storage, and essential amenities.',
+    description: 'Comfortable air-conditioned room for two residents at best boys hostel Bhopal, equipped with beds, storage, and essential amenities.',
     capacity: '2 beds',
     features: ['Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
     image: '/images/galleryroom8.jpeg',
@@ -31,7 +31,7 @@ const rooms: Room[] = [
     id: '2',
     name: 'Triple Sharing Room',
     type: 'triple sharing',
-    description: 'Spacious room for three residents at boys hostel MP Nagar, equipped with comfortable beds, storage, and essential amenities.',
+    description: 'Spacious room for three residents at boys hostel Bhopal MP Nagar, equipped with comfortable beds, storage, and essential amenities.',
     capacity: '3 beds',
     features: ['Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
     image: '/images/room3.jpeg',
@@ -40,7 +40,7 @@ const rooms: Room[] = [
     id: '3',
     name: 'Double Sharing AC Room',
     type: 'double sharing',
-    description: 'Air-conditioned room for two residents at luxury hostel Bhopal, with individual beds, storage, and modern amenities.',
+    description: 'Air-conditioned room for two residents at luxury boys hostel Bhopal, with individual beds, storage, and modern amenities.',
     capacity: '2 beds',
     features: ['AC', 'Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
     image: '/images/galleryroom2.jpeg',
@@ -49,7 +49,7 @@ const rooms: Room[] = [
     id: '4',
     name: 'Triple Sharing AC Room',
     type: 'triple sharing',
-    description: 'Spacious air-conditioned room for three residents at secure hostel MP Nagar, equipped with beds, storage, and amenities.',
+    description: 'Spacious air-conditioned room for three residents at secure boys hostel Bhopal MP Nagar, equipped with beds, storage, and amenities.',
     capacity: '3 beds',
     features: ['AC', 'Study Table', 'Wardrobe', 'Study Lamp', 'Mattress', 'Pillow', 'Blanket', 'Mirror'],
     image: '/images/room101.png',
@@ -140,9 +140,9 @@ export default function RoomsPage() {
               className="text-sm sm:text-base md:text-lg lg:text-xl tracking-wide font-extralight text-gray-500 mb-4 sm:mb-5 md:mb-6 max-w-2xl mx-auto leading-relaxed px-4 sm:px-6 md:px-0"
               variants={textVariants}
             >
-              Book <strong>double sharing and triple sharing AC rooms</strong> at the <strong>best boys hostel in Bhopal MP Nagar</strong>.
+              Book <strong>double sharing and triple sharing AC rooms</strong> at the <strong>best boys hostel Bhopal in MP Nagar</strong>.
               <br className="hidden sm:block" />
-              <span className="text-gray-400"> Secure accommodation with modern amenities at <strong>affordable rates</strong>.</span>
+              <span className="text-gray-400"> Secure accommodation with modern amenities at <strong>affordable rates</strong> at Boys Hostel Bhopal.</span>
             </motion.p>
           </motion.div>
         </div>
@@ -172,7 +172,7 @@ export default function RoomsPage() {
                     {room.image ? (
                       <Image
                         src={room.image}
-                        alt={`${room.name} - Jain's boys Stay Bhopal MP Nagar`}
+                        alt={`${room.name} - Boys Hostel Bhopal - Best Hostel in MP Nagar`}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -257,7 +257,7 @@ export default function RoomsPage() {
                       >
                         <a
                           href={`https://wa.me/919826080999?text=${encodeURIComponent(
-                            `Hi, I would like to book the following room at Jain's boys Stay:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\n\nPlease provide details about the booking process.`
+                            `Hi, I would like to book the following room at Jain boys Stay:\n\nRoom: ${room.name}\nType: ${room.type}\nCapacity: ${room.capacity}\nFeatures: ${room.features.join(', ')}\n\nPlease provide details about the booking process.`
                           )}`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -292,7 +292,7 @@ export default function RoomsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.6 }}
             >
-              Book AC Room at Best Hostel in Bhopal
+              Book AC Room at Boys Hostel Bhopal - Best Hostel in MP Nagar
             </motion.h2>
             <motion.p
               className="text-sm sm:text-base md:text-lg font-extralight text-gray-500 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed"
@@ -300,7 +300,7 @@ export default function RoomsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.1, duration: 0.6 }}
             >
-              Secure your spot at Jain's boys Stay - luxury boys hostel in Bhopal MP Nagar with AC rooms and modern facilities.
+              Secure your spot at Boys Hostel Bhopal - Jain boys Stay, the best boys hostel in Bhopal MP Nagar with AC rooms and modern facilities.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

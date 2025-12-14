@@ -163,8 +163,8 @@ export function HeroSection() {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-3 sm:mb-4 md:mb-5 leading-[1.1] text-black px-2 sm:px-0 tracking-tight"
               variants={titleVariants}
             >
-              <span className="block">Best Hostel in Bhopal</span>
-              <span className="block font-normal">MP Nagar</span>
+              <span className="block">Boys Hostel Bhopal</span>
+              <span className="block font-normal">Best Hostel in MP Nagar</span>
             </motion.h1>
 
             <motion.div
@@ -178,9 +178,9 @@ export function HeroSection() {
               className="text-sm sm:text-base md:text-lg lg:text-xl tracking-wide font-extralight text-gray-500 mb-4 sm:mb-5 md:mb-6 max-w-2xl mx-auto leading-relaxed px-4 sm:px-6 md:px-0"
               variants={textVariants}
             >
-              <strong>Luxury boys hostel Bhopal</strong> with secure accommodation, AC rooms, and mess facility.
+              <strong>Best boys hostel in Bhopal</strong> with secure accommodation, AC rooms, and mess facility.
               <br className="hidden sm:block" />
-              <span className="text-gray-400"> <strong>Affordable boys hostel MP Nagar</strong> - Your home away from home.</span>
+              <span className="text-gray-400"> <strong>Luxury boys hostel MP Nagar</strong> - Your home away from home.</span>
             </motion.p>
 
             <motion.div
@@ -268,7 +268,7 @@ export function HeroSection() {
                     >
                       <Image
                         src={room.imageUrl}
-                        alt={`${room.title} - Jain's boys Stay Bhopal MP Nagar`}
+                        alt={`${room.title} - Jain boys Stay Bhopal MP Nagar`}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                         sizes="(max-width: 640px) 90vw, (max-width: 768px) 75vw, (max-width: 1024px) 280px, (max-width: 1280px) 300px, 320px"
