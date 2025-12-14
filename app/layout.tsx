@@ -16,11 +16,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://boyshostelbhopal.co
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Boys Hostel Bhopal | Best Luxury Boys Hostel in Bhopal MP Nagar - Jain boys Stay Hostel",
+    default: "Boys Hostel Bhopal | Best Luxury Boys Hostel in Bhopal MP Nagar - Jain boys Stay",
     template: "%s | Boys Hostel Bhopal"
   },
   description:
-    "Boys Hostel Bhopal - Jain boys Stay Hostel is the best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security. Top-rated boys hostel in Bhopal. Book now!",
+    "Boys Hostel Bhopal - Jain boys Stay is the best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security. Top-rated boys hostel in Bhopal. Book now!",
   keywords: [
     'boys hostel bhopal',
     'boys hostel in bhopal',
@@ -57,11 +57,9 @@ export const metadata: Metadata = {
     'boys pg in bhopal',
     'hostel with mess bhopal',
     'affordable hostel bhopal',
-    'jain hostel mp nagar',
-    'jains boys stay hostel',
+    'jains boys stay',
     'jains boys stay bhopal',
     'jains boys stay mp nagar',
-    'jain boys stay hostel bhopal',
     'ac rooms hostel bhopal',
     'air conditioned hostel bhopal',
     'hostel with gym bhopal',
@@ -98,9 +96,7 @@ export const metadata: Metadata = {
     'boys hostel booking bhopal',
     'hostel for students bhopal',
     'hostel for working professionals bhopal',
-    'boys stay hostel bhopal',
     'boys stay bhopal',
-    'boys stay hostel mp nagar',
     'boys stay mp nagar',
     'best boys pg bhopal',
     'boys paying guest bhopal',
@@ -110,7 +106,7 @@ export const metadata: Metadata = {
     'boys hostel plot 106 mp nagar',
     'hostel near navoday hospital bhopal'
   ],
-  authors: [{ name: "Jain boys Stay Hostel" }],
+  authors: [{ name: "Jain boys Stay" }],
   creator: "Jain boys Stay",
   publisher: "Jain boys Stay",
   formatDetection: {
@@ -124,20 +120,20 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Jain boys Stay",
     title: "Boys Hostel Bhopal | Best Luxury Boys Hostel in Bhopal MP Nagar",
-    description: "Boys Hostel Bhopal - Jain boys Stay hostel is the best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security. Top-rated boys hostel in Bhopal.",
+    description: "Boys Hostel Bhopal - Jain boys Stay is the best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security. Top-rated boys hostel in Bhopal.",
     images: [
       {
         url: `${siteUrl}/hero.png`,
         width: 1200,
         height: 630,
-        alt: "Jain Hostel Bhopal - Boys Hostel Bhopal - Best Hostel in MP Nagar",
+        alt: "Jain boys Stay - Best Hostel in Bhopal MP Nagar",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Jain Hostel Bhopal | Jain Boys Hostel Bhopal - Best Luxury Boys Hostel in MP Nagar",
-    description: "Jain Hostel Bhopal - Boys Hostel Bhopal. Jain boys Stay is the best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security.",
+    title: "Boys Hostel Bhopal | Best Luxury Boys Hostel in Bhopal MP Nagar",
+    description: "Boys Hostel Bhopal - Jain boys Stay is the best luxury boys hostel in Bhopal, MP Nagar. Fully air-cooled campus, AC rooms, gym, yoga room, RO water, WiFi, entertainment room, pure veg food, 24/7 security.",
     images: [`${siteUrl}/hero.png`],
   },
   robots: {
