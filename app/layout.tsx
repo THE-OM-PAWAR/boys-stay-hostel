@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     'boys hostel in bhopal',
     'best boys hostel bhopal',
     'best jain hostel bhopal',
-    'boys hostel in mp nagar',
     'jain hostel bhopal',
     'jain hostel in bhopal',
     'best hostel in bhopal',
@@ -154,6 +153,11 @@ export const metadata: Metadata = {
     // Add your verification codes here when available
     // google: 'your-google-verification-code',
     // yandex: 'your-yandex-verification-code',
+  },
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
   },
 };
 
