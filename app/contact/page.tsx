@@ -524,27 +524,44 @@ Sent from Jain boys Stay Hostel Contact Form`;
                   <h3 className="text-lg font-semibold mb-2 text-gray-900 group-hover:text-black transition-colors">
                     Visit Boys Hostel Bhopal Near Navoday Hospital MP Nagar
                   </h3>
-                  <div className="text-sm text-gray-700 space-y-0.5 font-medium" itemScope itemType="https://schema.org/PostalAddress">
-                    <p itemProp="streetAddress">Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar</p>
-                    <p itemProp="addressLocality">Bhopal</p>
-                    <p itemProp="addressRegion">Madhya Pradesh <span itemProp="postalCode">462011</span></p>
-                    <p itemProp="addressCountry">India</p>
-                  </div>
+                  <a
+                    href="https://maps.app.goo.gl/hH7f44Gk7T1Re5iY9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-sm text-gray-700 space-y-0.5 font-medium hover:text-yellow transition-colors group/link"
+                    itemScope
+                    itemType="https://schema.org/PostalAddress"
+                  >
+                    <p itemProp="streetAddress" className="group-hover/link:underline">Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar</p>
+                    <p itemProp="addressLocality" className="group-hover/link:underline">Bhopal</p>
+                    <p itemProp="addressRegion" className="group-hover/link:underline">Madhya Pradesh <span itemProp="postalCode">462011</span></p>
+                    <p itemProp="addressCountry" className="group-hover/link:underline">India</p>
+                  </a>
                   <div className="mt-3 pt-3 border-t border-gray-100">
-                    <motion.div
-                      className="flex items-center gap-2 text-xs text-gray-500"
-                      animate={{
-                        opacity: [0.7, 1, 0.7],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: 'easeInOut',
-                      }}
+                    <a
+                      href="https://maps.app.goo.gl/hH7f44Gk7T1Re5iY9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
                     >
-                      <Globe className="w-3.5 h-3.5" />
-                      <span>Open for tours daily</span>
-                    </motion.div>
+                      <motion.div
+                        className="flex items-center gap-2 text-xs text-yellow hover:text-yellow/80 transition-colors font-medium"
+                        whileHover={{ x: 5 }}
+                        animate={{
+                          opacity: [0.7, 1, 0.7],
+                        }}
+                        transition={{
+                          opacity: {
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: 'easeInOut',
+                          },
+                        }}
+                      >
+                        <Globe className="w-3.5 h-3.5" />
+                        <span>View on Google Maps →</span>
+                      </motion.div>
+                    </a>
                   </div>
                 </div>
               </Card>

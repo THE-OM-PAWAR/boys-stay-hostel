@@ -205,10 +205,17 @@ export function HeroSection() {
                 <Button
                   size="sm"
                   variant="outline"
+                  asChild
                   className="border border-black text-black font-normal px-2.5 sm:px-3 md:px-8 py-2.5 sm:py-3 md:py-3.5 text-xs sm:text-sm rounded-full bg-transparent hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 focus:ring-0 hover:scale-105 active:scale-95 backdrop-blur-sm flex items-center gap-1.5"
                 >
-                  <MapPin className="w-5 h-5 text-black/70" />
-                  Location
+                  <a
+                    href="https://maps.app.goo.gl/hH7f44Gk7T1Re5iY9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MapPin className="w-5 h-5 text-black/70" />
+                    Location
+                  </a>
                 </Button>
               </motion.div>
               <motion.div variants={buttonVariants}>

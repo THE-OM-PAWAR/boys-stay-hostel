@@ -155,10 +155,18 @@ export function Footer() {
               >
                 <MapPin className="w-4 h-4 text-yellow mt-0.5 flex-shrink-0" />
                 <div itemScope itemType="https://schema.org/PostalAddress">
-                  <p itemProp="streetAddress">Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar</p>
-                  <p itemProp="addressLocality">Bhopal</p>
-                  <p itemProp="addressRegion">Madhya Pradesh <span itemProp="postalCode">462011</span></p>
-                  <p itemProp="addressCountry">India</p>
+                  <a
+                    href="https://maps.app.goo.gl/hH7f44Gk7T1Re5iY9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-black transition-colors group/link"
+                  >
+                    <p itemProp="streetAddress" className="group-hover/link:underline">Plot No. 106, Near Navoday Hospital, Zone-2 M.P. Nagar</p>
+                    <p itemProp="addressLocality" className="group-hover/link:underline">Bhopal</p>
+                    <p itemProp="addressRegion" className="group-hover/link:underline">Madhya Pradesh <span itemProp="postalCode">462011</span></p>
+                    <p itemProp="addressCountry" className="group-hover/link:underline">India</p>
+                    <span className="text-xs text-yellow mt-1 inline-block group-hover/link:translate-x-1 transition-transform">View on Google Maps →</span>
+                  </a>
                 </div>
               </motion.li>
               <motion.li
